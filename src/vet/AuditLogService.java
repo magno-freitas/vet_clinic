@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 
 public class AuditLogService {
-    public void logAction(String action, String username) throws SQLException {
+    public static void logAction(String action, String username) throws SQLException {
         String query = "INSERT INTO audit_log (action, username, timestamp) VALUES (?, ?, ?)";
         
         try (Connection conn = DatabaseConnection.getConnection();

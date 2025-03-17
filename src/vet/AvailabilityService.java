@@ -90,5 +90,17 @@ public class AvailabilityService {
         }
     }
 
+
+    public List<Availability> getAvailableSlotsForDate(java.util.Date date) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAvailableSlotsForDate'");
+    }
+
+
+    public void addAvailability(Availability slot) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addAvailability'");
+    }
+
     
 }

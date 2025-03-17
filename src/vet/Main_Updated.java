@@ -170,26 +170,21 @@ public class Main {
         if (date == null) return;
 
         if (!checkDailyAvailability(date, appointmentService)) return;
-                
-                List<Availability> availableSlots = getAvailableSlots(date, availabilityService);
-                if (availableSlots.isEmpty()) return;
-                
-                Availability selectedSlot = selectTimeSlot(scanner, availableSlots);
-                if (selectedSlot == null) return;
-                
-                Appointment appointment = createAppointment(petId, service, selectedSlot);
-                appointment.setServiceType(serviceType);
-                appointmentService.scheduleAppointment(appointment);
-                
-                showAppointmentConfirmation(appointment, date);
-            }
         
-            private static boolean checkDailyAvailability(Date date, AppointmentService appointmentService) {
-                // TODO Auto-generated method stub
-                throw new UnsupportedOperationException("Unimplemented method 'checkDailyAvailability'");
-            }
+        List<Availability> availableSlots = getAvailableSlots(date, availabilityService);
+        if (availableSlots.isEmpty()) return;
         
-            private static void validateEmail(String email) {
+        Availability selectedSlot = selectTimeSlot(scanner, availableSlots);
+        if (selectedSlot == null) return;
+        
+        Appointment appointment = createAppointment(petId, service, selectedSlot);
+        appointment.setServiceType(serviceType);
+        appointmentService.scheduleAppointment(appointment);
+        
+        showAppointmentConfirmation(appointment, date);
+    }
+
+    private static void validateEmail(String email) {
         if (!email.matches("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
             throw new IllegalArgumentException("Email inválido");
         }
@@ -340,7 +335,7 @@ public class Main {
         }
     }
     
-    private static boolean checkDailyAvailability(java.sql.Date date, AppointmentService appointmentService) throws SQLException {
+    private static boolean checkDailyAvailability(Date date, AppointmentService appointmentService) throws SQLException {
         List<Appointment> appointments = appointmentService.getAppointmentsByDate(date);
         if (appointments.size() >= 10) {
             System.out.println("Limite de consultas para este dia atingido (máximo: 10).");

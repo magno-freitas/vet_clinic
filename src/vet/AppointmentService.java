@@ -183,4 +183,14 @@ public class AppointmentService {
         appointment.setNotes(rs.getString("notes"));
         return appointment;
     }
+
+    public List<Appointment> getAppointmentsByDate(Date date) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAppointmentsByDate'");
+    }
+
+    public List<Appointment> getAppointmentsByDate(Date date) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAppointmentsByDate'");
+    }
 }

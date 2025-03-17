@@ -8,7 +8,7 @@ public class Pet {
     private String name;
     private String species;
     private String breed;
-    private Date birthDate;
+    private java.util.Date birthDate;
 
     public int getPetId() {
         return petId;
@@ -50,11 +50,12 @@ public class Pet {
         this.breed = breed;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
+    public java.sql.Date getBirthDate() {
+        // Converter java.util.Date para java.sql.Date
+        return birthDate != null ? new java.sql.Date(birthDate.getTime()) : null;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(java.util.Date birthDate) {
         this.birthDate = birthDate;
     }
 }
