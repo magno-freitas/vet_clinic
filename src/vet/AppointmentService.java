@@ -193,4 +193,9 @@ public class AppointmentService {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getAppointmentsByDate'");
     }
+
+    public List<Appointment> getAppointmentsByDate(Date date) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAppointmentsByDate'");
+    }
 }

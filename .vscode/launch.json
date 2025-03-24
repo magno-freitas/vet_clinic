@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main_Updated",
+            "request": "launch",
+            "mainClass": "vet/vet.Main_Updated",
+            "projectName": "vet"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
