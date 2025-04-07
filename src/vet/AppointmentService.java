@@ -184,18 +184,14 @@ public class AppointmentService {
         return appointment;
     }
 
-    public List<Appointment> getAppointmentsByDate(Date date) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAppointmentsByDate'");
-    }
-
-    public List<Appointment> getAppointmentsByDate(Date date) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAppointmentsByDate'");
-    }
-
-    public List<Appointment> getAppointmentsByDate(Date date) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAppointmentsByDate'");
+    public void cancelAppointment(int appointmentId) throws SQLException {
+        String query = "UPDATE appointments SET status = 'cancelado' WHERE appointment_id = ?";
+        
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            
+            stmt.setInt(1, appointmentId);
+            stmt.executeUpdate();
+        }
     }
 }

@@ -22,7 +22,10 @@ public class DatabaseConnection {
 
     public static Connection getConnection() throws SQLException {
         try {
-            Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            Connection conn = DriverManager.getConnection(
+                AppConfig.getDatabaseUrl(),
+                AppConfig.getDatabaseUser(),
+                AppConfig.getDatabasePassword());
             conn.setAutoCommit(true);
             return conn;
         } catch (SQLException e) {
