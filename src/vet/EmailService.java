@@ -2,37 +2,47 @@ package vet;
 
 import java.util.Properties;
 import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
+import javax.mail.internet.*;
+import java.util.logging.Logger;
+import vet.config.AppConfig;
+import vet.util.LoggerUtil;
+import vet.util.ValidationUtil;
+import vet.exception.VetClinicException;
 
 public class EmailService {
-    private static final String FROM_EMAIL = "your_email@example.com";
-    private static final String EMAIL_PASSWORD = "your_email_password";
+    private static final Logger logger = LoggerUtil.getLogger();
 
     public static void sendEmail(String to, String subject, String text) {
+        ValidationUtil.validateEmail(to);
+        ValidationUtil.validateNotEmpty(subject, "subject");
+        ValidationUtil.validateNotEmpty(text, "message text");
+
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", "smtp.example.com");
-        props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.host", AppConfig.getSmtpHost());
+        props.put("mail.smtp.port", AppConfig.getSmtpPort());
 
         Session session = Session.getInstance(props, new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(FROM_EMAIL, EMAIL_PASSWORD);
+                return new PasswordAuthentication(
+                    AppConfig.getEmailUsername(),
+                    AppConfig.getEmailPassword());
             }
         });
 
         try {
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(FROM_EMAIL));
+            message.setFrom(new InternetAddress(AppConfig.getEmailUsername()));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
             message.setSubject(subject);
             message.setText(text);
 
             Transport.send(message);
+            LoggerUtil.logInfo("Email sent successfully to: " + to);
         } catch (MessagingException e) {
-            throw new RuntimeException(e);
+            LoggerUtil.logError("Failed to send email to: " + to, e);
+            throw new VetClinicException("Failed to send email", e);
         }
     }
 }
-

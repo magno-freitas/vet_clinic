@@ -6,6 +6,16 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/HikariCP-5.0.1.jar"/>
+<classpathentry kind="lib" path="lib/slf4j-api-2.0.7.jar"/>
+<classpathentry kind="lib" path="lib/slf4j-simple-2.0.7.jar"/>
+	<classpathentry kind="lib" path="c:/Users/magno_freitas/Downloads/junit-platform-commons-1.9.2.jar"/>
+	<classpathentry kind="lib" path="c:/Users/magno_freitas/Downloads/junit-jupiter-engine-5.9.2.jar"/>
+	<classpathentry kind="lib" path="c:/Users/magno_freitas/Downloads/junit-jupiter-api-5.9.2 (1).jar"/>
+	<classpathentry kind="lib" path="c:/Users/magno_freitas/Downloads/slf4j-simple-2.0.7.jar"/>
+	<classpathentry kind="lib" path="c:/Users/magno_freitas/Downloads/slf4j-api-2.0.7.jar"/>
+	<classpathentry kind="lib" path="c:/Users/magno_freitas/Downloads/HikariCP-5.0.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="c:/Users/magno_freitas/Downloads/junit-jupiter-api-5.13.0-M2.jar"/>
 	<classpathentry kind="lib" path="c:/Users/magno_freitas/Downloads/javax.mail.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
