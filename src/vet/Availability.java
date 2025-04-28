@@ -23,8 +23,13 @@ public class Availability {
         return date;
     }
 
+
     public void setDate(java.util.Date date2) {
-        this.date = date2;
+        if (date2 != null) {
+            this.date = new java.sql.Date(date2.getTime());
+        } else {
+            this.date = null;
+        }
     }
 
     public Timestamp getStartTime() {
@@ -51,8 +56,4 @@ public class Availability {
         this.available = available;
     }
 
-    public void setDate(java.util.Date date2) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setDate'");
-    }
 }

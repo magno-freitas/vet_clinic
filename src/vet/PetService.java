@@ -128,8 +128,76 @@ public class PetService {
         return pets;
     }
 
-    public List<VaccineRecord> getVaccineHistory(int petId) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getVaccineHistory'");
+    public void deletePet(int petId) throws SQLException {
+        String query = "DELETE FROM pets WHERE pet_id = ?";
+        
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            
+            stmt.setInt(1, petId);
+            stmt.executeUpdate();
+        }
+    }
+    public void updatePet(Pet pet) throws SQLException {
+        String query = "UPDATE pets SET client_id = ?, name = ?, species = ?, breed = ?, birth_date = ? WHERE pet_id = ?";
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setInt(1, pet.getClientId());
+            stmt.setString(2, pet.getName());
+            stmt.setString(3, pet.getSpecies());
+            stmt.setString(4, pet.getBreed());
+            stmt.setDate(5, pet.getBirthDate());
+            stmt.setInt(6, pet.getPetId());
+
+            stmt.executeUpdate();
+        }
+    }
+    public List<Pet> getPetsByClientId(int clientId) throws SQLException {
+        String query = "SELECT * FROM pets WHERE client_id = ?";
+        List<Pet> pets = new ArrayList<>();
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setInt(1, clientId);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Pet pet = new Pet();
+                pet.setPetId(rs.getInt("pet_id"));
+                pet.setClientId(rs.getInt("client_id"));
+                pet.setName(rs.getString("name"));
+                pet.setSpecies(rs.getString("species"));
+                pet.setBreed(rs.getString("breed"));
+                pet.setBirthDate(rs.getDate("birth_date"));
+                pets.add(pet);
+            }
+        }
+        return pets;
+    }
+    public List<Pet> getPetsBySpecies(String species) throws SQLException {
+        String query = "SELECT * FROM pets WHERE species = ?";
+        List<Pet> pets = new ArrayList<>();
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, species);
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Pet pet = new Pet();
+                pet.setPetId(rs.getInt("pet_id"));
+                pet.setClientId(rs.getInt("client_id"));
+                pet.setName(rs.getString("name"));
+                pet.setSpecies(rs.getString("species"));
+                pet.setBreed(rs.getString("breed"));
+                pet.setBirthDate(rs.getDate("birth_date"));
+                pets.add(pet);
+            }
+        }
+        return pets;
     }
 }

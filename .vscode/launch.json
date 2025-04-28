@@ -1,14 +1,12 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
             "type": "java",
-            "name": "Current File",
+            "name": "Main_Updated",
             "request": "launch",
-            "mainClass": "${file}"
+            "mainClass": "vet/vet.Main_Updated",
+            "projectName": "vet"
         },
         {
             "type": "java",
@@ -16,6 +14,18 @@
             "request": "launch",
             "mainClass": "vet/vet.Main",
             "projectName": "vet"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "vet.Main",
+            "projectName": "vet-clinic",
+            "classpath": [
+                "${workspaceFolder}/target/classes",
+                "${workspaceFolder}/lib/*"
+            ],
+            "vmArgs": "--add-modules jakarta.mail,jakarta.activation"
         }
     ]
 }

@@ -1,4 +1,6 @@
 module vet {
-	requires java.sql;
-	requires java.mail;
+    requires java.sql;
+
+ 
+   
 }
