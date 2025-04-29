@@ -336,7 +336,7 @@ public class Main_Updated {
     }
     
     private static boolean checkDailyAvailability(Date date, AppointmentService appointmentService) throws SQLException {
-        List<Appointment> appointments = appointmentService.getAppointmentsByDate(date);
+        List<Appointment> appointments = appointmentService.getAppointmentsByDate((java.sql.Date) date);
         if (appointments.size() >= 10) {
             System.out.println("Limite de consultas para este dia atingido (máximo: 10).");
             return false;

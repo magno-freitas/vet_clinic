@@ -28,6 +28,7 @@ public class DatabaseConnection {
     }
 
     public static Connection getConnection() throws SQLException {
+<<<<<<< HEAD
         if (connection == null || connection.isClosed()) {
             try {
                 connection = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -47,6 +48,18 @@ public class DatabaseConnection {
             } catch (SQLException e) {
                 logger.log(Level.SEVERE, "Error closing database connection", e);
             }
+=======
+        try {
+            Connection conn = DriverManager.getConnection(
+                AppConfig.getDatabaseUrl(),
+                AppConfig.getDatabaseUser(),
+                AppConfig.getDatabasePassword());
+            conn.setAutoCommit(true);
+            return conn;
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, "Erro ao conectar ao banco de dados", e);
+            throw e;
+>>>>>>> 918ce33a363183d1ca964e2773ed218aa7f6e9b0
         }
     }
 }

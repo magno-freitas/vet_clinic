@@ -4,6 +4,16 @@
         {
             "type": "java",
             "name": "Main_Updated",
+<<<<<<< HEAD
+=======
+            "request": "launch",
+            "mainClass": "vet/vet.Main_Updated",
+            "projectName": "vet"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+>>>>>>> 918ce33a363183d1ca964e2773ed218aa7f6e9b0
             "request": "launch",
             "mainClass": "vet/vet.Main_Updated",
             "projectName": "vet"

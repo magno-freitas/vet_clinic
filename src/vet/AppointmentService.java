@@ -131,8 +131,20 @@ public class AppointmentService {
         return appointment;
     }
 
+<<<<<<< HEAD
     public List<Appointment> getAppointmentsByClientId(int clientId) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getAppointmentsByClientId'");
+=======
+    public void cancelAppointment(int appointmentId) throws SQLException {
+        String query = "UPDATE appointments SET status = 'cancelado' WHERE appointment_id = ?";
+        
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            
+            stmt.setInt(1, appointmentId);
+            stmt.executeUpdate();
+        }
+>>>>>>> 918ce33a363183d1ca964e2773ed218aa7f6e9b0
     }
 }
