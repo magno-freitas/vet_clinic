@@ -1,4 +1,4 @@
-package vet;
+
 
 public enum ServiceType {
     BANHO("Banho"),

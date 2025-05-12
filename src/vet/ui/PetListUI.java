@@ -1,7 +1,7 @@
-package vet.ui;
+package ui;
 
-import vet.*;
-import vet.util.LoggerUtil;
+import ui.*;
+import util.LoggerUtil;
 import java.sql.SQLException;
 import java.util.List;
 

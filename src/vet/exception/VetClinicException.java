@@ -1,4 +1,6 @@
-package vet.exception;
+package exception;
+
+
 
 public class VetClinicException extends RuntimeException {
     public VetClinicException(String message) {

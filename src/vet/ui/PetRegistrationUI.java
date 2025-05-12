@@ -1,9 +1,9 @@
-package vet.ui;
+package ui;
 
-import vet.*;
-import vet.util.ValidationUtil;
-import vet.util.LoggerUtil;
-import vet.exception.VetClinicException;
+import ui.*;
+import util.ValidationUtil;
+import util.LoggerUtil;
+import exception.VetClinicException;
 import java.sql.SQLException;
 import java.util.Scanner;
 

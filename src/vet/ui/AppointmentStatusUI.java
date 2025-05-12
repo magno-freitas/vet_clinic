@@ -1,13 +1,13 @@
-package vet.ui;
+package ui;
 
-import vet.*;
-import vet.util.LoggerUtil;
-import vet.exception.VetClinicException;
+import ui.*;
+import util.LoggerUtil;
+import exception.VetClinicException;
 import java.sql.SQLException;
 import java.util.Scanner;
 import java.util.List;
 
-public class AppointmentStatusUI {
+public class AppointmentStatusUI<ClientService, AppointmentService> {
     private final Scanner scanner;
     private final ClientService clientService;
     private final AppointmentService appointmentService;

@@ -1,4 +1,4 @@
-package vet;
+
 
 public class Resource {
     private int resourceId;

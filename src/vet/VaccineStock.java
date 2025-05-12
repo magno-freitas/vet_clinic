@@ -1,4 +1,4 @@
-package vet;
+
 
 public class VaccineStock {
     private int vaccineId;
