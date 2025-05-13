@@ -1,11 +1,11 @@
-package ui;
+
 
 import ui.*;
 import util.LoggerUtil;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.mysql.cj.xdevapi.Client;
+
 
 public class ClientListUI<ClientService> {
     private final ClientService clientService;

@@ -1,21 +1,34 @@
 {
     "version": "0.2.0",
     "configurations": [
-
         {
             "type": "java",
             "name": "Main_Updated",
-
-
+            "request": "launch",
+            "mainClass": "Main_Updated",
+            "projectName": "vet"
+        },
+        {
+            "type": "java",
+            "name": "vet/Main_Updated",
+            "request": "launch",
+            "mainClass": "vet/Main_Updated",
+            "projectName": "vet"
+        },
+        {
+            "type": "java",
+            "name": "Main_Updated",
             "request": "launch",
             "mainClass": "vet/vet.Main_Updated",
             "projectName": "vet",
-            "classPaths": ["${workspaceFolder}/bin", "${workspaceFolder}/lib/*"]
+            "classPaths": [
+                "${workspaceFolder}/bin",
+                "${workspaceFolder}/lib/*"
+            ]
         },
         {
             "type": "java",
             "name": "Current File",
- 
             "request": "launch",
             "mainClass": "vet/vet.Main_Updated",
             "projectName": "vet"

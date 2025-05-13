@@ -1,0 +1,577 @@
+Jovens Desenvolvedores: Inovação e Tecnologia
+SPEAK UP KIDS
+Daniele Luíza Venturil
+João Pedro Ferreira Ponchiroli2
+Manoela Pinto Guedes3
+RESUMO
+Este artigo destaca a identificação precoce de comunicação, interação social e
+comportamentos restritivos no contexto do transtorno do espectro do autismo (TEA) e a
+importância da tecnologia assistiva para abordar a necessidade de déficits persistentes. A
+análise do comportamento destaca padrões atipicos, como evitar o contato visual e ter
+dificuldade em compreender as nuances da comunicação. No campo da psicologia, estão
+em andamento pesquisas utilizando tecnologias de informação e comunicação (TIC) para
+treinar cuidadores em intervenções comportamentais intensivas e para facilitar a
+colaboração remota com profissionais especializados. Reconhecendo o impacto das TIC na
+educação e nas relações sociais, destaca-se a adaptação contínua às inovações
+tecnológicas na prática psicológica. Nós nos concentramos no desenvolvimento de
+aplicativos para crianças com TEA, inovando no aprendizado e no monitoramento e
+conectando professores, cuidadores e alunos. Este artigo destaca a interface entre
+tecnologia e TEA e destaca o potencial transformador da tecnologia no apoio educacional e
+psicológico. Diante das rápidas mudanças tecnológicas, enfatiza-se a necessidade de
+atualização profissional contínua e a aplicação dessas inovações para atender efetivamente
+às necessidades educacionais e clínicas e promover o desenvolvimento e a melhoria da
+qualidade de vida das pessoas com TEA.
+Palavras-chave: Transtorno do Espectro Autista. Tecnologia da Informação e
+Comunicação. Tecnologias Assistivas.
+ABSTRACT
+This article highlights the early identification of communication, social interaction, and
+restrictive behaviors in the context of autism spectrum disorder (ASD) and the importance
+of assistive technology to address the need for persistent deficits. Behavior analysis
+highlights atypical patterns, such as avoiding eye contact and having difficulty
+understanding the nuances of communication. In the field of psychology, research is
+underway using information and communication technologies (ICT) to train caregivers in
+intensive behavioral interventions and to facilitate remote collaboration with specialized
+professionals. Recognizing the impact of ICT on education and social relations, the
+continuous adaptation to technological innovations in psychological practice stands out. We
+focus on developing apps for children with ASD, innovating learning and monitoring, and
+connecting teachers, caregivers, and students. This article highlights the interface between
+1 Estudante. Escola Sesi. daniele_venturi@estudante.sesisenai.org.br
+2 Estudante. Escola Sesi. joao_ponchiroli@estudante.sesisenai.org.br
+3 Estudante. Escola Sesi. manoelapguedes@gmail.com
+Jovens Desenvolvedores: Inovação e Tecnologia
+technology and ASD and highlights the transformative potential of technology in
+educational and psychological support. Faced with rapid technological changes, the need
+for continuous professional updating and the application of these innovations to effectively
+meet educational and clinical needs and promote the development and improvement of the
+quality of life of people with ASD is emphasized..
+Keywords: Autism Spectrum Disorder. Information and Communication Technology.
+Assistive Technologies.
+1 INTRODUÇÃO
+A tecnologia está presente em quase todas as áreas do conhecimento, da educação
+à medicina. Segundo o IBGE (2020), 143,5 milhões (78,3 %) dos 183,3 milhões de pessoas
+com 10 anos ou mais no Brasil, usam a internet, mostrando que a maioria dos brasileiros
+usa a tecnologia para encontrar informações e se comunicar.
+Segundo Schenkel (2010), em seu trabalho sobre o uso das tecnologias de
+informação e comunicação na socialização dos idosos, ele afirma que as TIC influenciam as
+mudanças culturais e sociais e interferem nas relações mútuas das pessoas. Isto levanta a
+questão principal desta investigação: de que maneira as Tecnologias de Informação e
+Comunicação contribuem para o aprimoramento da socialização em crianças autistas?
+A hipótese é que a tecnologia contribui para melhorar a comunicação entre crianças
+com TEA e sua relação com o mundo. Para confirmar esta hipótese, foi traçado um objetivo
+geral que busca compreender como a tecnologia funciona como ferramenta para ajudar na
+socialização de crianças autistas. Procura esclarecer como as crianças autistas têm se
+desenvolvido positivamente em sua vida social com a ajuda da tecnologia.
+Contudo, é necessario afirmar que as doengas e transtornos mentais sdo elementos
+que alteram definitivamente a vida das pessoas que são diagnosticadas e de todos do seu
+meio social. Devido a esse fato, cada pessoa reage de maneira diferente a tal situagdo.
+Simplesmente ignoram ou negam o problema, atrasando a ajuda, o cuidado e a
+intervengdo. Uma das caracteristicas mais fortes do transtorno do espectro do autismo
+(TEA) é o atraso e o prejuizo nas areas de interagdo social.
+Habilidades e interações sociais podem ser ensinadas e aprendidas em diversos
+contextos sociais e ambientais utilizando ferramentas e momentos importantes na vida de
+criangas e adolescentes com TEA. A pesquisa foi criada, portanto, com o objetivo de
+contribuir para a compreensdo de que as novas tecnologias sdo ferramentas que
+funcionardo como facilitadoras no encontro subjetivo de criangas e adolescentes autistas e
+possibilita que eles encontrem outras formas de comunicagdo, conhegam a si mesmos e
+aos outros... Socializar no ambiente em que estdo inseridos. Porque a tecnologia tem sido
+uma ferramenta importante para as criangas com PEA, tanto na aprendizagem como na
+sua formagdo como cidaddos sociais.
+Assim, o objetivo geral desta pesquisa é compreender como a tecnologia funciona
+como ferramenta para ajudar na socializagao de criangas autistas. Procura esclarecer como
+as criangas autistas tém se desenvolvido positivamente em sua vida social com a ajuda da
+tecnologia. Com o intuito de alcancar esse objetivo amplo, estabeleceram-se as metas
+especificas seguintes:
+a) descrever a interagdo das pessoas autistas com o mundo através da
+tecnologia;
+Jovens Desenvolvedores: Inovação e Tecnologia
+b) identificar ferramentas tecnológicas que ajudem a socializar as crianças
+autistas com o mundo;
+c) apresentar a importância da tecnologia ao lado da psicologia como recurso
+para uma melhor integração das pessoas autistas na sociedade.
+É crucial reconhecer que doenças e transtornos mentais têm impacto definitivo na
+vida das pessoas diagnosticadas e em seu meio social. Diante disso, as reações individuais
+podem variar, desde a negação do problema até o atraso na busca por ajuda e
+intervenção. No contexto do TEA, destaca-se o atraso e prejuízo nas áreas de interação
+social como uma das características mais marcantes.
+Habilidades sociais podem ser ensinadas e aprendidas em diversos contextos, e é
+neste contexto que a pesquisa busca contribuir. O estudo visa esclarecer como as novas
+tecnologias funcionam como facilitadoras no encontro subjetivo de crianças autistas,
+proporcionando-lhes outras formas de comunicação e promovendo a compreensão de si
+mesmas e dos outros.
+2 2 TRANSTORNO DO ESPECTRO DO AUTISMO (TEA)
+O transtorno do espectro do autismo (TEA) é uma condição do
+neurodesenvolvimento com um número crescente de casos caracterizado por déficits
+persistentes na comunicação e interação social e padrões restritivos e repetitivos de
+comportamento, interesses ou atividades.
+O transtorno pode ser identificado precocemente no desenvolvimento da criança, na
+primeira infância, quando já é possivel observar déficits que pioram o funcionamento
+pessoal, social, acadêmico ou profissional do indivíduo.
+É de extrema importância que a familia esteja atenta aos sinais de alerta, que a
+criança seja diagnosticada precocemente e encaminhada para reabilitação precoce e
+intensiva, focada em distúrbios comportamentais e de comunicação.
+Conforme Caminha, et all. (2016), o autismo tornou-se um problema de saúde
+pública global e sua importância reflete em dois acontecimentos: a Organização das Nações
+Unidas (ONU) declarou o dia 2 de abril como o Dia Mundial de Conscientização do Autismo
+(NAÇÕES UNIDAS, 2008) e a entidade americana Autism Speaks convidaram vários marcos
+ao redor do mundo através da campanha “Light It Up Blue” lançada em 2010 para iluminar
+a cor azul naquele dia para promover a conscientização sobre o transtorno.
+No Brasil, em 27/12/2012 foi aprovada a Lei nº 12.764 ou Lei Berenice Piana,
+mandatada pelo Congresso Nacional, que estabelece uma política nacional para a proteção
+dos direitos das pessoas com transtorno do espectro do autismo em relação a uma pessoa
+com tal transtorno, como uma pessoa física com deficiência para todos os efeitos legais.
+Segundo a APA (2014), no DSM-V, os critérios diagnósticos para TEA incluem:
+Déficits persistentes na comunicação social e na interação social em múltiplos
+contextos;
+Déficits na reciprocidade sócio-emocional, variando, por exemplo, de abordagem
+social anormal e dificuldade de envolvimento em conversas normais, até
+compartilhamento limitado de interesses, emoções ou afeto, até dificuldade de
+iniciar ou responder a interações sociais;
+Déficits nos comportamentos de comunicação não-verbal utilizados para interação
+social;
+Déficits no desenvolvimento, manutenção e compreensão de relacionamentos, que
+vão desde a dificuldade de adaptar o comportamento para se adequar a diferentes
+Jovens Desenvolvedores: Inovação e Tecnologia
+contextos sociais, até a dificuldade de compartilhar brincadeiras imaginativas ou
+formar amizades, até a falta de interesse pelos colegas.
+De acordo com o Manual diagnóstico e estatistico de transtornos mentais, 52 edição,
+(DSM-5-TR), a gravidade é especificada com base no comprometimento da comunicação
+social e em padrões de comportamento restritos e repetitivos. Sua descrição é apresentada
+em três níveis conforme APA (2014):
+Nível 3: “Exige suporte muito substancial”, onde o indivíduo apresenta graves
+défices na comunicação social verbal e não-verbal com graves prejuízos no
+funcionamento, limitação grave no início de interações sociais e resposta mínima à
+abertura social que difere dos outros. Inflexibilidade comportamental, extrema
+dificuldade com mudanças ou outro comportamento restrito/repetitivo que prejudica
+significativamente o funcionamento em todos os domínios. Com grande
+ansiedade/dificuldade em mudar o foco ou a ação.
+Nível 2: “Requer Apoio Substancial”, representando graves déficits na comunicação
+social verbal e não-verbal; perdas sociais 6bvias mesmo na presença de apoio;
+limitações em iniciar interações sociais e uma capacidade reduzida ou anormal de
+responder à abertura social dos outros. Comportamentos restritivos e repetitivos
+incluem inflexibilidade, dificuldade de mudança ou outros comportamentos
+restritos/repetitivos que ocorrem com frequência suficiente para serem aparentes ao
+observador médio e interferirem no funcionamento em uma variedade de contextos.
+Ansiedade e/ou dificuldade em mudar o foco ou as ações.
+Nível 1: “Requer apoio”, em que a ausência de apoio e os déficits na comunicação
+social causam perdas significativas. A dificuldade em iniciar interações sociais é um
+exemplo claro das respostas atípicas ou malsucedidas de outras pessoas à abertura
+social. Ele pode parecer ter um interesse diminuído em interações sociais. Portanto,
+em comportamentos restritivos e repetitivos, a inflexibilidade causa interferência
+significativa no funcionamento e em múltiplos contextos. Dificuldade em mudar de
+atividades. Problemas com organizagdo e planejamento são barreiras à
+independência.
+Segundo Caminha, et al. (2016), Crianças diagnosticadas com TEA, exibem padrões
+atípicos de expressões faciais e contato visual, caracterizados por evitar o contato visual
+direto, limitação na capacidade de modular suas expressões para estabelecer contato social
+e dificuldade em compreender as sutilezas da comunicação, incluindo a dificuldade em
+entender expressões faciais e a interpretação de significados contidos em gestos e olhares.
+Essas manifestações contribuem para desafios substanciais na esfera da interação
+social e da reciprocidade comunicativa. A análise aprofundada dessas características
+destaca a necessidade de intervenções específicas para o desenvolvimento dessas
+habilidades em crianças com TEA, visando não apenas à compreensão acadêmica, mas
+também à implementação de estratégias práticas para melhorar a qualidade de vida e a
+integração social desses indivíduos.
+O transtorno de interação social pode se manifestar como isolamento social ou
+comportamento social inadequado, com incapacidade de desenvolver vínculos emocionais e
+relacionamentos com pares (APA, 2014).
+Alguns pais de crianças autistas afirmam que seus filhos apresentam
+comportamentos atípicos desde os primeiros meses de vida: não estendem as mãos para
+caminhar com eles, não olham em seus rostos, não se aproximam do colo da mãe, ficam
+em silêncio e não se movem.
+Com o tempo, elas parecem ficar surdas porque não respondem às chamadas, mas
+respondem a sons estranhos, como o farfalhar de uma embalagem de doce, a música de
+Jovens Desenvolvedores: Inovação e Tecnologia
+um desenho animado ou um evento digital. É impossível ser adequado na “atenção
+conjunta” e explicar como o comportamento utilizado é compartilhado na vivência de
+objetos e eventos com o outro.
+Crianças normais demonstram interesse, diversão ou medo de um objeto ao
+olhar intencionalmente para um objeto ou jogo e depois para a pessoa ao lado, indicando
+assim que a atenção da outra pessoa é importante e desejável (ALESSANDRI, MUNDY,
+TUCHMAN, 2005).
+A falta de reciprocidade social ou emocional é observada pela preferência por
+brincadeiras solitárias e pela manipulação de objetos impróprios para brincar. Segundo
+Caminha, et al. (2016), os autistas apresentam indiferença afetiva ou afeto inadequado e
+falta de empatia social ou emocional.
+Têm dificuldade em julgar a intenção dos estados emocionais dos outros, não
+compreendem o pensamento do ambiente social e não inferem o que as outras pessoas
+podem estar a pensar.
+Caminha, et al. (2016), afirmam ainda que devido a padrões limitados e repetitivos
+de comportamento, interesses ou atividades, as crianças autistas utilizam os brinquedos de
+forma diferente das outras crianças. Por exemplo, alinham bonecos e dão cambalhotas por
+períodos longos e monótonos.
+Algumas crianças têm habilidades notáveis para resolver quebra-cabeças. Se for
+uma brincadeira, será repetitiva, monótona, sem as peculiaridades da brincadeira
+espontânea das crianças comuns, ou seja, não são exploradas diferenças sutis em relação
+à brincadeira imaginativa ou simbólica real.
+Imitar a brincadeira com outra crianga, “fingir” (brincar de esconde-esconde, fingir
+que prepara comida) estd muito além das capacidades das criancas autistas, pois essas
+atividades exigem a compreensdo de comportamentos complexos, tanto sociais quanto ndo
+sociais. Ndo existe uma simulagdo tipica da infancia e eles realizam atividades lúdicas fora
+do contexto.
+Elas tém uma capacidade extraordinaria de identificar detalhes inconsequentes,
+juntamente com uma incapacidade de separar e formar conceitos. A énfase é colocada em
+aspectos elementares dos objetos, como cheiro, sabor, textura ou partes. (CAMINHA, et
+al. 2016).
+Corroborando, Montenegro, Xavier e Lima (2021) relatam que criangas com
+diagndstico de TEA comem lentamente e com prazer; brincam obsessivamente com água;
+tém prazer em fazer barulho com objetos metdlicos; sdo fascinadas por movimentos, como
+girar repetidamente moedas ou abrir e fechar portas. Alguns autistas sempre carregam
+consigo uma corda, saco plastico ou pano, o que significa que ficam presos a objetos
+inusitados.
+Os esteredtipos comportamentais no contexto do TEA apresentam uma ampla gama
+de manifestagbes, abrangendo desde comportamentos motores simples, como o
+movimento repetitivo dos bragos, até posturas corporais ou padrões manuais peculiares,
+bem como a persisténcia em rotinas e rituais complexos e disfuncionais.
+Esses padrBes comportamentais são acompanhados por uma notavel resisténcia a
+mudanga, evidenciada por episodios frequentes de "acessos de raiva" quando confrontados
+com tentativas de alteragdo nas atividades habituais. Além disso, em algumas situagdes,
+observa-se a autolesdo como uma expressdo desses comportamentos estereotipados. Essa
+diversidade de manifestagdes comportamentais ressalta a complexidade do TEA e a
+necessidade de compreensdo aprofundada desses padrdes para informar estratégias
+eficazes de intervengdo e suporte.
+Jovens Desenvolvedores: Inovação e Tecnologia
+Quando empregadas de maneira adequada, as ferramentas virtuais apresentam uma
+vasta gama de beneficios no contexto do ensino e aprendizagem. No entanto, sua eficácia
+transcende a mera utilizagdo apropriada; é imperativo considerar a necessidade de novas
+praticas, métodos de ensino e abordagens na interagdo com as novas geragdes.
+As novas tecnologias assumem um carater essencial no ambiente escolar,
+desempenhando um papel crucial na formagdo dos alunos pertencentes a essa nova
+geragdo. Isso proporciona clareza quanto ao papel que desempenhardo no compromisso
+com a educagdo e no delineamento do futuro da nagdo, intrinsecamente conectados as
+evolugBes sociais cotidianas (ASSIS, 2015).
+Essa perspectiva destaca a importancia de uma abordagem estratégica e integrada
+ao incorporar tecnologias no contexto educacional, visando potencializar o engajamento e o
+desenvolvimento dos alunos.
+Kensk (2012) prospecta a relagdo entre educagdo e tecnologia no Brasil, destacando
+a democratizagdo do acesso a tecnologias digitais, como objetos de aprendizagem,
+essenciais para praticas inclusivas. Aborda a aplicagdo desses recursos no ensino de
+criangas com autismo, fornecendo perspectivas valiosas para estratégias pedagogicas
+contemporaneas e integradas.
+LEVY (1993, p.22) define tecnologias inteligentes “como estruturas internalizadas no
+espago da memória humana, criadas pelos humanos para desenvolver conhecimento e
+posterior aprendizagem”. Exemplificam-se como tais tecnologias as diversas formas
+linguisticas, como faladas, escritas e digitais, utilizadas na comunicaggo.
+A convergéncia das Tecnologias de Informagdo e Comunicagdo (TIC's) com avangos
+inteligentes configura uma revolugdo abrangente na comunicagdo e aquisicio de
+conhecimento em escala global. Esse sinergismo não apenas reconfigura nosso estilo de
+vida, mas também redefine os padrões de aprendizado.
+Como observado por Cardoso (1999, p. 218), a inovagdo na tecnologia da
+comunicagdo, aliada ao progresso cientifico e tecnoldgico, desencadeia uma série de
+transformagdes sociais. Essa interagdo dindmica impulsiona a disseminagdo do
+conhecimento, moldando a sociedade contempordnea e influenciando as interagdes
+cotidianas em todas as esferas da vida.
+As TIC's constituem uma ferramenta vital para o processamento abrangente de
+informagGes, destacando-se na transformagdo, armazenamento, protecdo, processamento,
+transmissdo e recuperacdo de dados. Essa funcionalidade é alcangada por meio de
+dispositivos como computadores, equipamentos de comunicagdo e aplicagdes de software,
+proporcionando acesso ubiquo a informaggo.
+A intrinseca importéncia das TIC's é desafiadora de ser precisamente determinada,
+dada a dindmica inerente aos conceitos, métodos e aplicagdes compreendidos por essa
+área em constante evolugdo. Esta constatagdo reforga a necessidade continua de
+investigagdo e adaptagdo, sustentando o papel fundamental das TIC's na sociedade
+moderna.
+Conforme Gomes et al. (2021), as TIC's exercem influéncia abrangente em todos os
+aspectos da vida cotidiana, emergindo como prioridade tanto na educagdo formal quanto
+na informal. Seu impacto transcende o dominio educacional, consolidando-se como um
+elemento cultural, econdmico e politico fundamental, com implicagdes significativas
+globalmente, inclusive em regides remotas e menos desenvolvidas que ndo tém acesso
+direto a tecnologia.
+Gomes et al. (2021) salientam que a nova geragdo, imersa nas TIC's, vive
+simultaneamente em mdltiplos mundos, moldando identidades através da interagdo digital.
+Jovens Desenvolvedores: Inovação e Tecnologia
+Diante das mudanças globais e da pandemia, a tecnologia torna-se essencial para a
+socialização, abrangendo todas as faixas etárias, consolidando uma intimidade tecnológica
+crucial para a construção da sociabilidade humana.
+As pessoas contemporaneas confrontam uma cultura medidtica global que exerce
+uma influéncia unificadora, promovendo uma pedagogia cultural que orienta
+comportamentos e atitudes. Esse fendmeno molda ndo apenas o "o que pensar, o que
+sentir, o que acreditar, o que temer e o que desejar", mas também transforma as
+dindmicas tradicionais de socializagdo em culturas impactadas pelas TIC's, introduzindo
+novos padrdes sociais.
+No cendrio atual, as TIC's sdo uma forca social robusta, ndo sendo apenas
+ferramentas neutras, mas meios cujas consequéncias sdo expressivamente influenciadas
+pelos contextos históricos, sociais e culturais nos quais são empregadas (BALLESTEROS
+GUERRA; PICAZO SANCHEZ, 2019).
+2.1 TECNOLOGIAS ASSITIVAS
+Num cenario cada vez mais tecnoldgico, voltado a minimizagdo do esforgo manual e
+mental, pensar em mecanismos para superar as limitagdes das deficiéncias é crucial para
+promover uma melhoria igualitiria para todos. O foco em Tecnologias Assistivas (TA),
+especialmente aquelas direcionadas ao TEA, é essencial para facilitar a comunicagdo e
+proporcionar atendimento adequado as pessoas com esse transtorno.
+De cordo com RIBEIRO (2021, pg. 6)
+0 uso de diferentes aplicativos que contemplam jogos educativos para autistas são
+excelentes recursos pedagogicos que contribuem para a inclusdo desse aluno na
+sala de aula dos anos iniciais, estimulando a socializagdo e a alfabetizagdo. Nesse
+sentido da inclusio do TEA, tem-se o campo da Comunicagdo Alternativa
+Aumentativa (CAA) que engloba recursos de alta e baixa tecnologia.
+Individuos autistas manifestam desafios na interagdo social, enfrentando dificuldades
+no emprego da linguagem para comunicagdo, além de caracteristicas repetitivas. A
+tecnologia emerge como uma ponte fundamental, viabilizando aprendizado dindmico e
+interativo para esses individuos, promovendo um desempenho ótimo em fungdes
+perceptivas, visuais e espaciais.
+Esta conexdo entre autismo e tecnologia revela-se promissora para intervengoes
+eficazes, contribuindo para aprimorar habilidades e facilitar a adaptagdo desses individuos
+num contexto social e educacional.
+É fundamental destacar que o emprego de material tecnoldgico para criangas
+autistas deve garantir seguranga e ser contextualizado no ambiente de desenvolvimento da
+crianga. A manipulagdo precisa ser oportuna, integrando-se harmoniosamente ao ambiente
+familiar.
+As TA’s emergiram para proporcionar suporte as pessoas com diversas limitagdes,
+facilitando uma vida digna e minimizando os obsticulos enfrentados ao longo de suas
+trajetdrias. Essas tecnologias podem se manifestar como recursos tangiveis, como uma
+simples muleta, ou como servigos, envolvendo a instrugdo especializada para seu eficaz
+emprego por um profissional qualificado.
+A abrangéncia dessas TA’s abraca uma variedade de ferramentas e praticas,
+representando um campo significativo de intervengdo para promover a inclusão e a
+autonomia de individuos com limitagdes.
+3 SPEAK UP KIDS
+Jovens Desenvolvedores: Inovação e Tecnologia
+No contexto educacional de crianças com TEA, a diversificação de recursos e
+materiais pedagógicos é fundamental para atender às necessidades específicas de cada
+indivíduo. A inclusão de uma variedade de softwares de comunicação torna-se crucial,
+expandindo significativamente as opções para intervenção pedagógica personalizada.
+Nesse sentido, o desenvolvimento de um aplicativo dedicado busca suprir essa
+demanda, proporcionando uma ferramenta flexível e adaptavel, visando aprimorar a
+experiência educacional de crianças com TEA.
+3.1 DIAGRAMA DE CASO DE USO
+Um diagrama de caso de uso é uma ferramenta essencial na engenharia de
+software, proporcionando uma representação visual que delineia as interações cruciais
+entre os usuários e o sistema em questão. Sua utilidade vai além da mera ilustração; serve
+como instrumento fundamental para compreender a dinâmica do sistema, comunicar
+efetivamente com as partes interessadas e identificar requisitos essenciais.
+Essa representação visual torna-se um elemento central na interseção entre a
+compreensão conceitual e a aplicação prática, garantindo uma abordagem sistemática e
+abrangente no desenvolvimento de software. A seguir apresenta-se o diagrama de caso de
+uso do software desenvolvido.
+Figura 1 - Diagrama de caso de uso
+Fonte: Dos autores, 2023.
+Além disso, o diagrama de caso de uso desempenhou um papel fundamental na
+elaboração dos métodos do sistema. Ao visualizar as interações entre os atores, facilitou a
+criação de métodos específicos para cada função, organizando as funcionalidades e
+promovendo eficiência, o que foi essencial para o sucesso da implementação do sistema.
+3.2 DIAGRAMA DE ENTIDADE E RELACIONAMENTO
+Os Diagramas Entidade-Relacionamento (DER's) surgiram como uma ferramenta
+visual primária no desenvolvimento de aplicações infantis para indivíduos com autismo.
+Essa representação gráfica delineia as entidades, tais como objetos ou conceitos, e os
+respectivos relacionamentos dentro de um sistema, elementos essenciais para a
+compreensão das estruturas de dados e do design do banco de dados. Além de meras
+ilustrações, eles desempenham um papel crucial na comunicação eficiente entre as equipes
+envolvidas em um projeto.
+Jovens Desenvolvedores: Inovação e Tecnologia
+qura 2 - Diagrama de Entidade Relacionamento
+— f | | | L[
+Fonte: Dos autores, 2023.
+Os diagramas Entidade-Relacionamento (DER) desempenham um papel importante
+na compreensdo das tabelas do banco de dados, e a Figura 2 é uma representagdo visual
+dessa estrutura. Neste diagrama, a tabela é cuidadosamente delineada para que as chaves
+primarias e estrangeiras possam ser claramente identificadas.
+Esta representagdo visual inclui uma arquitetura de banco de dados detalhada, indo
+além de uma simples representacdo tabular para fornecer uma visdo abrangente dos
+relacionamentos entre entidades e suas propriedades.
+3.3 DIAGRAMA DE CLASSES
+O Diagrama de Classes, fundamental no desenvolvimento do aplicativo, visualiza a
+estrutura e relações entre elementos. Modela objetos, evidenciando associagdes e
+hierarquias, facilitando comunicagdo na equipe.
+Essencial para o desenvolvimento e manutengdo do software, este diagrama oferece
+uma compreensdo clara e intuitiva da arquitetura do aplicativo. Destaca-se pela
+representagdo visual precisa das classes envolvidas, suas associagdes e hierarquias,
+fornecendo uma base sólida para a implementação e evolução continua do aplicativo.
+Figura 3 - Diagrama de Classes
+Fonte: Dos autores, 2023.
+Jovens Desenvolvedores: Inovação e Tecnologia
+O Diagrama de Classes simplifica a criação organizada das classes e métodos no
+aplicativo desenvolvido, destacando operações cruciais como "Cadastrar", "Alterar",
+"Excluir" e "Consultar". Essa ferramenta essencial modela a estrutura do sistema,
+proporcionando uma visão clara e eficaz das classes envolvidas e de suas interações. O
+diagrama serve como base para a implementação eficiente do aplicativo, garantindo uma
+abordagem organizada e intuitiva para o desenvolvimento e aprimoramento contínuo.
+3.4 IDEAÇÃO
+O objetivo do desenvolvimento desta plataforma é proporcionar experiências
+enriquecedoras a crianças e jovens com TEA. Além das telas interativas, a interatividade
+pode ser adaptada às preferências e necessidades individuais, promovendo uma
+comunicação personalizada e eficaz.
+O conteúdo selecionado pelo responsável amplia o impacto do aplicativo, permitindo
+uma abordagem educacional e divertida. A estética brilhante e convidativa não atende
+apenas às preferências visuais das crianças, mas também se esforça para proporcionar
+uma experiência divertida e envolvente. Este projeto constitui, portanto, uma importante
+inovação na promoção da comunicação de crianças e jovens com TEA.
+3.4.1 Speak Up Kids e seu funcionamento
+0 aplicativo tem como objetivo promover uma experiéncia intuitiva ao usuário. Além
+do login diferenciado para professores, alunos e responsáveis, destaca-se a praticidade na
+entrada de dados. Após a autenticagdo, os usuários podem acessar diversas
+funcionalidades do aplicativo, personalizadas de acordo com as necessidades especificas de
+cada perfil.
+Com a sua abordagem abrangente, a plataforma promove a interagdo continua com
+os alunos, tendo em conta a presenca de professores de apoio. O objetivo das propostas é
+otimizar o ambiente escolar, tornando-o mais acessivel e eficiente para todos os
+envolvidos.
+O projeto compreende uma tela de apresentagdo, fornecendo informagGes sobre a
+plataforma e suas funcionalidades, com a opção de pular a apresentagdo. Apds, a etapa de
+login é subdividida em "Professor", "Responsavel" e "Aluno".
+a) Para acessos de professores, serdo solicitados nome, email, usuario e senha;
+b) No caso de alunos, o aplicativo requererd nome, email, usuario e senha do aluno;
+c) Para responsaveis, sera necessario fornecer nome, email, usuario, senha do
+responsavel e a matricula do dependente, visivel na conta do aluno.
+Após insergdo dos dados, o usudrio terd acesso as funcionalidades do APP. Em caso
+de erro de usuario ou senha, uma notificagdo solicitara uma segunda tentativa.
+Considerou-se que o professor, cadastrado no app, será de apoio, permanecendo
+com o aluno durante todo o periodo escolar, evitando a necessidade de trocar de acesso a
+cada aula. O professor terd a responsabilidade de langar as atividades na plataforma.
+3.4.2 Tela inicial
+A Figura 4 representa a tela inicial do aplicativo, permitindo que o usuario escolha o
+tipo de acesso desejado. A opgdo "Não Possuo Conta" redireciona para outra tela,
+facilitando o processo de criagdo de uma nova conta na plataforma.
+Ao realizar o login como funcionario, o usudrio encontra as opções de Administrador
+e Professor. O Administrador gerencia as turmas, enquanto o Professor tem a
+Jovens Desenvolvedores: Inovação e Tecnologia
+responsabilidade de cadastrar, corrigir atividades e disponibilizar conteúdos para os alunos.
+Essa diferenciação de papéis otimiza a gestão e a interação no ambiente educacional.
+Figura 4 - Tela inicial
+SPEAK UP KIDS
+BEM VINDO!
+Aluno >
+Funcionário > Responsável — >
+Não Possui Conta
+Fonte: Dos Autores, 2023.
+A Figura 5 ilustra a tela inicial após o login do usuário como Aluno, proporcionando
+uma visão abrangente de todas as atividades cadastradas pelo professor durante a
+semana.
+Figura 5 - Tela após login como aluno
+B . e
+0l João Pedro F. Ponchiroli :) Essas são suas Atividade desta Semana
+Dom
+Fonte: Dos autores, 2023.
+Nessa interface, o aluno tem acesso facilitado às tarefas designadas, promovendo
+uma experiência intuitiva e organizada. Essa funcionalidade visa otimizar o
+acompanhamento das atividades pelos alunos, proporcionando uma visão consolidada e
+facilitando o gerenciamento das responsabilidades acadêmicas.
+A Figura 6 exibe a tela inicial após o login do usuário como funcionário e, em
+seguida, como professor. Nessa visualização, é apresentada uma visão abrangente do
+desempenho do aluno, incluindo atividades enviadas, corrigidas e o desempenho geral nas
+entregas.
+Jovens Desenvolvedores: Inovação e Tecnologia
+igura 6 - Tela após login professor
+Fn e € o
+Fonte: Dos autores, 2023.
+Ao utilizar a plataforma, o professor tem acesso facilitado a dados relevantes,
+permitindo uma avaliação eficaz do progresso dos alunos. Essa funcionalidade visa
+aprimorar a tomada de decisões pedagógicas, proporcionando uma análise abrangente e
+dinâmica do desempenho acadêmico dos estudantes.
+A Figura 7 destaca a interface de cadastro de atividades destinadas aos alunos,
+evidenciando uma etapa crucial para a interagdo professor-aluno na plataforma.
+Nessa tela dedicada, o professor tem a capacidade de registrar e planejar atividades
+educacionais, contribuindo para uma gestão eficiente do contetido pedagdgico.
+Figura 7 - Tela de cadastro de atividades
+[ P YR
+Nova atividode
+Fonte: Dos autores, 2023.
+Essa funcionalidade é essencial para a personalização do ensino, permitindo que o
+professor adapte e envie atividades específicas, alinhadas aos objetivos didáticos,
+promovendo uma experiência educacional mais direcionada e eficaz.
+Na Figura 8 é exibida a tela de acompanhamento das atividades enviadas aos
+alunos, proporcionando uma visualização detalhada das datas de início e término, além do
+status de cada tarefa.
+Figura 8 - Tela de acompanhamento de atividades
+Bin om 19 At
+Esses são suas Atividades
+Adicionar Atividade
+Fonte: Dos autores, 2023.
+Jovens Desenvolvedores: Inovação e Tecnologia
+Essa interface permite que os professores monitorem o progresso das atividades de
+forma eficaz, facilitando a gestão do cronograma educacional. Com informações claras
+sobre o andamento das tarefas, o professor pode realizar intervenções e ajustes conforme
+necessário, promovendo uma abordagem mais dinâmica e personalizada no processo de
+ensino-aprendizagem.
+Na Figura 9, destaca-se a tela das atividades designadas aos alunos, proporcionando
+uma visão clara das tarefas atribuídas a cada estudante, incluindo informações sobre datas
+de início, encerramento e o status referente à correção da atividade.
+Figura 9 - Relação de a lades do aluno
+1 e SR
+Olá João Pedro F. Ponchiroli Essas são suas Atividades
+Usta sobre Matemática Básica
+Fonte: Dos autores, 2023.
+Na Figura 10, é evidenciada a tela de devolutiva das atividades enviadas aos alunos,
+proporcionando um espaço essencial para o feedback personalizado do professor sobre o
+desempenho de cada aluno.
+iqura 10 - Feedback das atividades
+[0 menosemana — E conecão — () atvidades
+Lista sobre Matemática Básica 6u Professor Debux um Comentário para essa Aividade:
+Fontes: Dos autores, 2023.
+Nesse ambiente dedicado, o aluno recebe orientações construtivas, promovendo
+uma interação valiosa entre educador e aluno. Essa funcionalidade visa aprimorar a
+comunicação e a compreensão, contribuindo para o desenvolvimento acadêmico
+individualizado e fortalecendo a relação de aprendizado na plataforma.
+4 CONSIDERAÇÕES FINAIS
+Os resultados obtidos demonstram a viabilidade da utilização de tecnologias de
+informação e comunicação (TIC) para apoiar crianças com autismo e outros perfis de
+deficiência. O importante papel desta tecnologia tem sido destacado como uma importante
+ferramenta para treinamento de cuidadores em intervenções comportamentais intensivas.
+Jovens Desenvolvedores: Inovação e Tecnologia
+Sob a orientação de profissionais especializados, os cuidadores também podem
+realizar atividades em diversos locais, demonstrando o potencial das TIC para facilitar
+intervenções à distância. No contexto dos avanços tecnológicos, os psicólogos precisam
+estar atentos às mudanças, a fim de integrá-las nos diversos contextos de apoio
+educacional.
+A implementação desta tecnologia tem se mostrado importante para atender à
+crescente necessidade de apoio educacional e ampliar as possibilidades de intervenção no
+contexto da psicologia educacional. Os resultados destacam a eficácia das TIC como
+ferramenta de ensino à distância, proporcionando oportunidades únicas para prestadores
+de cuidados e profissionais colaborarem de forma mais plena.
+A capacidade de realizar atividades de orientação independentemente da localização
+geográfica destaca o potencial revolucionário das TIC na prestação de serviços de
+intervengdo comportamental. Considerando estes cenários, é importante reconhecer o
+papel transformador das TIC na prática psicológica.
+A adaptação contínua às inovações tecnológicas é essencial para garantir que as
+estratégias de intervenção respondam às necessidades atuais. O uso eficaz desta
+tecnologia não só melhora as intervenções comportamentais, mas também permite uma
+abordagem mais abrangente e acessível que aborda uma variedade de necessidades e
+situações.
+Além disso, a implementação bem sucedida das TIC requer uma abordagem
+integrada que inclua a formação contínua de profissionais de psicologia. A educação
+continuada proporciona uma compreensão mais profunda das ferramentas disponíveis,
+preparando os psicólogos para aproveitar ao máximo as oportunidades oferecidas pelas
+TIC.
+Neste sentido, a integração eficaz das TIC na prática psicológica reforça a
+importância de uma abordagem holística e atualizada para atender às necessidades
+dinâmicas da área.
+REFERÊNCIAS BIBLIOGRÁFICAS
+ALESSANDRI, M.; MUNDY, P.; TUCHMAN, R.F. Déficit Social en el Autism: Un Enfoque en la
+Atención Conjunta. In: Revista de Neurologia, V. 40, S.1, P. S137-141, 2005.
+AMERICAN PSYCHIATRIC ASSOCIATION (APA). Manual diagndstico e estatistico de
+transtornos mentais: DSM-5. 5. ed. Porto Alegre: Artmed, 2014.
+ASSIS, L. M. E. Educagdo e tecnologias: o novo ritmo da informagdo. Bolema (Rio Claro,
+SP): Boletim de Educagdo Matemdtica. 2015, v. 29, n. 51. pp. 428-434. Disponivel em:
+https://www.scielo.br/j/bolema/a/9NNK8ZZ5vq5XNKjm9nBZzGj/?lang=pt. Acesso em: 19
+nov. 2023.
+CORDEIRO, M. D; DE SOUZA, M. D. Tecnologia assistiva no contexto escolar: Um sistema
+de comunicagdo alternativa para letramento de pessoas com autismo. Brazilian Journal of
+Development, v. 6, n. 9, p. 70743-70769, 2020.
+COSTA, M. S., COSTA, V. F. G., & VIEIRA JUNIOR, N. Uso do aplicativo SpeeCH como
+tecnologia assistiva para uma crianga com transtorno do espectro autista (TEA): um estudo
+de caso. Revista Educagao Especial, 36(1), e8/1-19.
+https://doi.org/10.5902/1984686X70474. Disponivel em:
+https://periodicos.ufsm.br/educacaoespecial/article/view/70474. Acesso em: 15 out. 2023.
+Jovens Desenvolvedores: Inovação e Tecnologia
+GOMES, C. G. S. et al. Efeitos do Uso de Tecnologias da Informação e Comunicação na
+Capacitação de Cuidadores de Crianças com Autismo. Rev. bras. educ. espec. [online].
+2021, vol.27, e0085. Epub 02-Mar-2021. ISSN 1980-5470. https://doi.org/10.1590/1980-
+54702021v27e0085.
+KENSKI, V. M. Educagdo e tecnologias: o novo ritmo da informagdo. 82 Ed. Campinas, SP:
+Papirus, 2012.
+MONTENEGRO, A.C.A; XAVIER, LA.LN; LIMA R. Autismo comunica: comunicagdo
+alternativa promovendo acessibilidade comunicacional. In: Aratjo NA, Lucena JA, StudartPereira L, editores. Relatos de experiéncias em Fonoaudiologia. Recife: Editora UFPE; 2021.
+PROENGCA, M. F. R.; MORAES FILHO, I. M. de; SANTOS, C. C. T.; RODRIGUES, T. P. R,,
+CANGUSSU, D. D. D.; & SOUTO, O. B. de. (2019). A tecnologia assistiva aplicada aos casos
+de Transtorno do Espectro do Autismo (TEA). Revista Eletronica Acervo Saúde, (31), e541.
+https://doi.org/10.25248/reas.e541.2019
+RODRIGUES, P. R.; ALVES, L. R. G. Tecnologia assistiva — uma revisdo do tema. HOLOS,
+[S. 1], v. 6 p. 170-180, 2014. DOI: 10.15628/hol0s.2013.1595. Disponivel em:
+https://www?2.ifrn.edu.br/ojs/index.php/HOLOS/article/view/1595. Acesso em: 25 out.
+2023.
+da SILVA, V.V.F; da SILVA ROSSATO, F.G.F. Uso de tecnologia assistiva para comunicagdo
+aumentativa ou alternativa para portadores de chá em uma instituicdo do terceiro setor.
+Revista Foco, 16 (6), e2421. Disponivel em:
+https://ojs.focopublicacoes.com.br/foco/article/view/2421. Acesso em: 12 out. 2023.
+SILVA, M.Z.L. ARTUSO, A.R. e TORTATO, C.S.B. Tecnologias de inclusdo no ensino de
+criangas com TEA. Rev. Eletrénica Pesquiseduca. Santos, Volume 12, número 26, p. 157-
+179, jan.-abril, 2020.

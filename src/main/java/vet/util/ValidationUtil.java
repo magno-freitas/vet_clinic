@@ -1,6 +1,6 @@
-package vet.util;
+package util;
 
-import vet.exception.VetClinicException;
+import exception.VetClinicException;
 import java.util.regex.Pattern;
 import java.sql.Timestamp;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package vet.util;
+package util;
 
 import java.util.logging.Logger;
 import java.util.logging.FileHandler;

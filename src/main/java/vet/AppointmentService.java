@@ -1,9 +1,13 @@
-
-
-import java.sql.*;
+package vet;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Date;
+import java.util.List;
 
 public class AppointmentService {
     
@@ -138,7 +142,7 @@ public class AppointmentService {
     }
 
     public void cancelAppointment(int appointmentId) throws SQLException {
-        String query = "UPDATE appointments SET status = 'cancelado' WHERE appointment_id = ?";
+        String query = "UPDATE appointments SET status = 'cancelled' WHERE appointment_id = ?";
         
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
