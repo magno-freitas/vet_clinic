@@ -24,19 +24,18 @@
             <artifactId>mysql-connector-j</artifactId>
             <version>8.0.33</version>
         </dependency>
-    <dependencies>
+        
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>6.3.0</version>
         </dependency>
     
-    
-      <dependency>
-        <groupId>io.github.geniusay</groupId>
-        <artifactId>spring-boot-starter</artifactId>
-        <version>1.1.2</version>
-      </dependency>
+        <dependency>
+            <groupId>io.github.geniusay</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>1.1.2</version>
+        </dependency>
     </dependencies>
 
     <build>

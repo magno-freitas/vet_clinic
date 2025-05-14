@@ -5,6 +5,13 @@
             "type": "java",
             "name": "Main_Updated",
             "request": "launch",
+            "mainClass": "vet.Main_Updated",
+            "projectName": "vet"
+        },
+        {
+            "type": "java",
+            "name": "Main_Updated",
+            "request": "launch",
             "mainClass": "Main_Updated",
             "projectName": "vet"
         },
