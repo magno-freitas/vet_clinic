@@ -1,4 +1,4 @@
-package vet.service;
+package service;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,14 +10,14 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import vet.model.User;
-import vet.model.UserRole;
-import vet.util.ConnectionPool;
-import vet.util.LoggerUtil;
-import vet.util.ValidationUtil;
-import vet.util.PasswordUtils;
-import vet.exception.DatabaseException;
-import vet.exception.ValidationException;
+import model.User;
+import model.UserRole;
+import util.ConnectionPool;
+import util.LoggerUtil;
+import util.ValidationUtil;
+import util.PasswordUtils;
+import exception.DatabaseException;
+import exception.ValidationException;
 
 /**
  * Service class for managing users

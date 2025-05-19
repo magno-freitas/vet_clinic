@@ -2,14 +2,21 @@ package vet.util;
 
 import vet.exception.ValidationException;
 
+import java.util.Date;
 import java.util.regex.Pattern;
 
 /**
  * Utility class for input validation
  */
 public class ValidationUtil {
-    private static final Pattern EMAIL_PATTERN = Pattern.compile("^[A-Za-z0-9+_.-]+@(.+)$");
+    // More comprehensive email pattern
+    private static final Pattern EMAIL_PATTERN = Pattern.compile("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$");
+    
+    // Phone pattern that allows international formats
     private static final Pattern PHONE_PATTERN = Pattern.compile("^\\+?[0-9]{10,15}$");
+    
+    // Pattern for names (letters, spaces, hyphens, apostrophes)
+    private static final Pattern NAME_PATTERN = Pattern.compile("^[\\p{L} .'-]+$");
     
     /**
      * Validate that a string is not null or empty
@@ -98,7 +105,64 @@ public class ValidationUtil {
     }
     
     /**
-     * Sanitize a string to prevent SQL injection
+     * Validate that a string is a valid name
+     * @param name The name to validate
+     * @param fieldName The name of the field
+     * @throws ValidationException If the name is invalid
+     */
+    public static void validateName(String name, String fieldName) throws ValidationException {
+        validateRequired(name, fieldName);
+        if (!NAME_PATTERN.matcher(name).matches()) {
+            throw new ValidationException("Invalid " + fieldName.toLowerCase() + " format");
+        }
+    }
+    
+    /**
+     * Validate that a date is in the future
+     * @param date The date to validate
+     * @param fieldName The name of the field
+     * @throws ValidationException If the date is not in the future
+     */
+    public static void validateFutureDate(Date date, String fieldName) throws ValidationException {
+        if (date == null) {
+            throw new ValidationException(fieldName + " is required");
+        }
+        
+        Date now = new Date();
+        if (date.before(now)) {
+            throw new ValidationException(fieldName + " must be in the future");
+        }
+    }
+    
+    /**
+     * Validate that a date is in the past
+     * @param date The date to validate
+     * @param fieldName The name of the field
+     * @throws ValidationException If the date is not in the past
+     */
+    public static void validatePastDate(Date date, String fieldName) throws ValidationException {
+        if (date == null) {
+            throw new ValidationException(fieldName + " is required");
+        }
+        
+        Date now = new Date();
+        if (date.after(now)) {
+            throw new ValidationException(fieldName + " must be in the past");
+        }
+    }
+    
+    /**
+     * Validate that a string is not empty
+     * @param value The string to validate
+     * @param fieldName The name of the field
+     * @throws ValidationException If the string is empty
+     */
+    public static void validateNotEmpty(String value, String fieldName) throws ValidationException {
+        validateRequired(value, fieldName);
+    }
+    
+    /**
+     * Sanitize a string to prevent SQL injection and XSS
      * @param input The string to sanitize
      * @return The sanitized string
      */
@@ -106,7 +170,18 @@ public class ValidationUtil {
         if (input == null) {
             return null;
         }
-        // Remove potentially dangerous characters
-        return input.replaceAll("[;'\"]", "");
+        
+        // Remove potentially dangerous characters for SQL injection
+        String sanitized = input.replaceAll("[;'\"]", "");
+        
+        // Escape HTML special characters to prevent XSS
+        sanitized = sanitized.replace("&", "&amp;")
+                            .replace("<", "&lt;")
+                            .replace(">", "&gt;")
+                            .replace("\"", "&quot;")
+                            .replace("'", "&#x27;")
+                            .replace("/", "&#x2F;");
+        
+        return sanitized;
     }
 }

@@ -1,12 +1,13 @@
-package vet;
+package vet.vet;
 
 import vet.config.AppConfig;
 import vet.ui.MainFrame;
 import vet.util.ConnectionPool;
 import vet.util.LoggerUtil;
 
-import javax.swing.SwingUtilities;
 import java.util.logging.Logger;
+
+import javax.swing.SwingUtilities;
 
 /**
  * Main entry point for the Veterinary Clinic Application

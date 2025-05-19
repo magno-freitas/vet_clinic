@@ -1,4 +1,4 @@
-package vet.service;
+package service;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -11,12 +11,12 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import vet.model.Pet;
-import vet.util.ConnectionPool;
-import vet.util.LoggerUtil;
-import vet.util.ValidationUtil;
-import vet.exception.DatabaseException;
-import vet.exception.ValidationException;
+import model.Pet;
+import util.ConnectionPool;
+import util.LoggerUtil;
+import util.ValidationUtil;
+import exception.DatabaseException;
+import exception.ValidationException;
 
 /**
  * Service class for managing pets

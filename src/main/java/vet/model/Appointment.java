@@ -9,7 +9,6 @@ import java.text.SimpleDateFormat;
 public class Appointment {
     private int appointmentId;
     private int petId;
-    private String service;
     private Timestamp startTime;
     private Timestamp endTime;
     private String status;
@@ -26,18 +25,17 @@ public class Appointment {
     /**
      * Constructor with essential fields
      * @param petId The ID of the pet
-     * @param service The service description
      * @param serviceType The type of service
      * @param startTime The start time of the appointment
      * @param endTime The end time of the appointment
      */
-    public Appointment(int petId, String service, ServiceType serviceType, Timestamp startTime, Timestamp endTime) {
+    public Appointment(int petId, ServiceType serviceType, Timestamp startTime, Timestamp endTime) {
         this.petId = petId;
-        this.service = service;
         this.serviceType = serviceType;
         this.startTime = startTime;
         this.endTime = endTime;
-        this.status = "scheduled";
+        this.status = "SCHEDULED";
+        this.price = serviceType.getDefaultPrice();
     }
 
     /**
@@ -77,15 +75,20 @@ public class Appointment {
      * @return The service description
      */
     public String getService() {
-        return service;
+        return serviceType != null ? serviceType.getDescription() : null;
     }
 
     /**
-     * Set the service description
-     * @param service The service description
+     * Set the service by description
+     * @param serviceDescription The service description
      */
-    public void setService(String service) {
-        this.service = service;
+    public void setService(String serviceDescription) {
+        if (serviceDescription != null) {
+            this.serviceType = ServiceType.fromDescription(serviceDescription);
+            if (this.serviceType != null && this.price == 0) {
+                this.price = this.serviceType.getDefaultPrice();
+            }
+        }
     }
 
     /**
@@ -166,6 +169,9 @@ public class Appointment {
      */
     public void setServiceType(ServiceType serviceType) {
         this.serviceType = serviceType;
+        if (serviceType != null && this.price == 0) {
+            this.price = serviceType.getDefaultPrice();
+        }
     }
     
     /**
@@ -208,12 +214,23 @@ public class Appointment {
         return dateFormat.format(endTime);
     }
     
+    /**
+     * Calculate the duration of the appointment in minutes
+     * @return The duration in minutes
+     */
+    public int getDurationMinutes() {
+        if (startTime == null || endTime == null) {
+            return serviceType != null ? serviceType.getDurationMinutes() : 0;
+        }
+        return (int) ((endTime.getTime() - startTime.getTime()) / (1000 * 60));
+    }
+    
     @Override
     public String toString() {
         return "Appointment{" +
                 "appointmentId=" + appointmentId +
                 ", petId=" + petId +
-                ", service='" + service + '\'' +
+                ", service='" + getService() + '\'' +
                 ", startTime=" + getFormattedStartTime() +
                 ", endTime=" + getFormattedEndTime() +
                 ", status='" + status + '\'' +

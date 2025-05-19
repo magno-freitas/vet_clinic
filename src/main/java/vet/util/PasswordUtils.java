@@ -82,19 +82,40 @@ public class PasswordUtils {
      * @return The generated password
      */
     public static String generateRandomPassword(int length) {
-        if (length < 8) {
-            length = 8; // Minimum length for security
+        if (length < 12) {
+            length = 12; // Increased minimum length for better security
         }
         
-        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+        String upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String lowerChars = "abcdefghijklmnopqrstuvwxyz";
+        String numbers = "0123456789";
+        String specialChars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+        
         SecureRandom random = new SecureRandom();
         StringBuilder sb = new StringBuilder();
         
-        for (int i = 0; i < length; i++) {
-            int randomIndex = random.nextInt(chars.length());
-            sb.append(chars.charAt(randomIndex));
+        // Ensure at least one character from each category
+        sb.append(upperChars.charAt(random.nextInt(upperChars.length())));
+        sb.append(lowerChars.charAt(random.nextInt(lowerChars.length())));
+        sb.append(numbers.charAt(random.nextInt(numbers.length())));
+        sb.append(specialChars.charAt(random.nextInt(specialChars.length())));
+        
+        // Fill the rest of the password
+        String allChars = upperChars + lowerChars + numbers + specialChars;
+        for (int i = 4; i < length; i++) {
+            int randomIndex = random.nextInt(allChars.length());
+            sb.append(allChars.charAt(randomIndex));
         }
         
-        return sb.toString();
+        // Shuffle the password
+        char[] password = sb.toString().toCharArray();
+        for (int i = 0; i < password.length; i++) {
+            int j = random.nextInt(password.length);
+            char temp = password[i];
+            password[i] = password[j];
+            password[j] = temp;
+        }
+        
+        return new String(password);
     }
 }

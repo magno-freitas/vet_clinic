@@ -30,7 +30,7 @@ public class ConnectionPool {
                 config.setJdbcUrl(AppConfig.getDatabaseUrl());
                 config.setUsername(AppConfig.getDatabaseUser());
                 config.setPassword(AppConfig.getDatabasePassword());
-                config.setMaximumPoolSize(10);
+                config.setMaximumPoolSize(AppConfig.getDatabasePoolSize());
                 config.setMinimumIdle(5);
                 config.setIdleTimeout(300000); // 5 minutes
                 config.setConnectionTimeout(20000); // 20 seconds

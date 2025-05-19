@@ -3,14 +3,18 @@ package ui;
 import ui.*;
 import util.LoggerUtil;
 import exception.VetClinicException;
+import model.Appointment;
+import service.AppointmentService;
+import service.ClientService;
+
 import java.sql.SQLException;
 import java.util.Scanner;
 import java.util.List;
 
-public class AppointmentStatusUI<ClientService, AppointmentService> {
+public class AppointmentStatusUI {
     private final Scanner scanner;
-    private final ClientService clientService;
-    private final AppointmentService appointmentService;
+    private final service.ClientService clientService;
+    private final service.AppointmentService appointmentService;
 
     public AppointmentStatusUI(Scanner scanner, ClientService clientService, 
                              AppointmentService appointmentService) {

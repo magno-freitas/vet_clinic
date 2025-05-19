@@ -1,4 +1,4 @@
-package vet.service;
+package service;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,10 +12,10 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import vet.model.AuditLog;
-import vet.util.ConnectionPool;
-import vet.util.LoggerUtil;
-import vet.exception.DatabaseException;
+import model.AuditLog;
+import util.ConnectionPool;
+import util.LoggerUtil;
+import exception.DatabaseException;
 
 /**
  * Service class for managing audit logs

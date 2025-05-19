@@ -1,7 +1,12 @@
+package ui;
 
+import java.util.Scanner;
+import vet.util.LoggerUtil;
+import vet.service.AppointmentService;
+import vet.service.AvailabilityService;
+import vet.service.ClientService;
+import vet.service.PetService;
 
-import ui.*;
-import util.LoggerUtil;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -79,5 +84,10 @@ public class MainFrame {
                 System.out.println("Opção inválida!");
         }
         return false;
+    }
+
+    public void setVisible(boolean b) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setVisible'");
     }
 }

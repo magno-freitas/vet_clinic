@@ -1,0 +1,28 @@
+schemaVersion: 2.0.0
+metadata:
+  name: vet-clinic
+  version: 1.0.0
+  displayName: Vet Clinic Application
+  description: Java Maven project with HTML/CSS/JS frontend
+components:
+  - name: dev
+    container:
+      image: public.ecr.aws/aws-mde/universal-image:latest
+      memoryLimit: 2Gi
+      mountSources: true
+commands:
+  - id: install
+    exec:
+      component: dev
+      commandLine: "mvn clean dependency:resolve"
+      workingDir: ${PROJECT_SOURCE}
+  - id: build
+    exec:
+      component: dev
+      commandLine: "mvn clean package -DskipTests"
+      workingDir: ${PROJECT_SOURCE}
+  - id: test
+    exec:
+      component: dev
+      commandLine: "mvn test"
+      workingDir: ${PROJECT_SOURCE}

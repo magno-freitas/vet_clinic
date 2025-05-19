@@ -2,18 +2,21 @@ package vet.config;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import vet.util.LoggerUtil;
 
 /**
  * Configuration manager for the application
  * Loads and provides access to application properties
  */
 public class AppConfig {
-    private static final Logger logger = Logger.getLogger(AppConfig.class.getName());
+    private static final Logger logger = LoggerUtil.getLogger(AppConfig.class);
     private static Properties properties;
-    private static final String CONFIG_FILE = "application.properties";
+    private static final String CONFIG_FILE = "src/main/resources/application.properties";
 
     /**
      * Initialize the configuration
@@ -21,12 +24,22 @@ public class AppConfig {
      */
     public static void initialize() {
         properties = new Properties();
-        try (FileInputStream input = new FileInputStream(CONFIG_FILE)) {
-            properties.load(input);
-            logger.info("Configuration loaded successfully from " + CONFIG_FILE);
+        try (InputStream input = AppConfig.class.getClassLoader().getResourceAsStream("application.properties")) {
+            if (input != null) {
+                properties.load(input);
+                logger.info("Configuration loaded successfully from classpath");
+            } else {
+                // Try loading from file system if not found in classpath
+                try (FileInputStream fileInput = new FileInputStream(CONFIG_FILE)) {
+                    properties.load(fileInput);
+                    logger.info("Configuration loaded successfully from " + CONFIG_FILE);
+                } catch (IOException e) {
+                    logger.log(Level.WARNING, "Could not load configuration file from file system: " + e.getMessage());
+                    setDefaultProperties();
+                }
+            }
         } catch (IOException e) {
-            logger.log(Level.SEVERE, "Could not load configuration file: " + e.getMessage(), e);
-            // Load default values as fallback
+            logger.log(Level.WARNING, "Could not load configuration from classpath: " + e.getMessage());
             setDefaultProperties();
         }
     }
@@ -36,12 +49,13 @@ public class AppConfig {
      */
     private static void setDefaultProperties() {
         properties.setProperty("db.url", "jdbc:mysql://localhost:3306/vet_clinic");
-        properties.setProperty("db.user", "root");
-        properties.setProperty("db.password", "");
-        properties.setProperty("mail.smtp.host", "smtp.example.com");
+        properties.setProperty("db.username", "root");
+        properties.setProperty("db.password", "root");
+        properties.setProperty("db.poolSize", "10");
+        properties.setProperty("mail.smtp.host", "smtp.gmail.com");
         properties.setProperty("mail.smtp.port", "587");
-        properties.setProperty("mail.username", "user@example.com");
-        properties.setProperty("mail.password", "password");
+        properties.setProperty("mail.smtp.auth", "true");
+        properties.setProperty("mail.smtp.starttls.enable", "true");
         logger.info("Using default configuration values");
     }
 
@@ -76,7 +90,7 @@ public class AppConfig {
         if (properties == null) {
             initialize();
         }
-        return properties.getProperty("db.user");
+        return properties.getProperty("db.username");
     }
 
     /**
@@ -88,6 +102,22 @@ public class AppConfig {
             initialize();
         }
         return properties.getProperty("db.password");
+    }
+    
+    /**
+     * Get the database connection pool size
+     * @return The database connection pool size
+     */
+    public static int getDatabasePoolSize() {
+        if (properties == null) {
+            initialize();
+        }
+        try {
+            return Integer.parseInt(properties.getProperty("db.poolSize", "10"));
+        } catch (NumberFormatException e) {
+            logger.warning("Invalid pool size in configuration, using default: 10");
+            return 10;
+        }
     }
 
     /**
@@ -113,24 +143,24 @@ public class AppConfig {
     }
 
     /**
-     * Get the email username
-     * @return The email username
+     * Get the email authentication setting
+     * @return The email authentication setting
      */
-    public static String getEmailUsername() {
+    public static boolean getSmtpAuth() {
         if (properties == null) {
             initialize();
         }
-        return properties.getProperty("mail.username");
+        return Boolean.parseBoolean(properties.getProperty("mail.smtp.auth", "true"));
     }
 
     /**
-     * Get the email password
-     * @return The email password
+     * Get the email STARTTLS setting
+     * @return The email STARTTLS setting
      */
-    public static String getEmailPassword() {
+    public static boolean getSmtpStartTls() {
         if (properties == null) {
             initialize();
         }
-        return properties.getProperty("mail.password");
+        return Boolean.parseBoolean(properties.getProperty("mail.smtp.starttls.enable", "true"));
     }
 }

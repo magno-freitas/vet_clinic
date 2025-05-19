@@ -1,4 +1,4 @@
-package model;
+package vet.model;
 
 /**
  * Represents a user in the veterinary clinic system
@@ -154,5 +154,10 @@ public class User {
                 ", fullName='" + fullName + '\'' +
                 ", active=" + active +
                 '}';
+    }
+
+    public String getPassword() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getPassword'");
     }
 }

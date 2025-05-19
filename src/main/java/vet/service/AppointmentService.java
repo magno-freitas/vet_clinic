@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -38,20 +36,19 @@ public class AppointmentService {
         try {
             validateAppointment(appointment);
             
-            String query = "INSERT INTO appointments (pet_id, service, service_type, start_time, end_time, status, notes, price) " +
-                          "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO appointments (pet_id, service_type, start_time, end_time, status, notes, price) " +
+                          "VALUES (?, ?, ?, ?, ?, ?, ?)";
             
             try (Connection conn = ConnectionPool.getConnection();
                  PreparedStatement stmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
                 
                 stmt.setInt(1, appointment.getPetId());
-                stmt.setString(2, appointment.getService());
-                stmt.setString(3, appointment.getServiceType().name());
-                stmt.setTimestamp(4, appointment.getStartTime());
-                stmt.setTimestamp(5, appointment.getEndTime());
-                stmt.setString(6, appointment.getStatus());
-                stmt.setString(7, appointment.getNotes());
-                stmt.setDouble(8, appointment.getPrice());
+                stmt.setString(2, appointment.getServiceType().name());
+                stmt.setTimestamp(3, appointment.getStartTime());
+                stmt.setTimestamp(4, appointment.getEndTime());
+                stmt.setString(5, appointment.getStatus());
+                stmt.setString(6, appointment.getNotes());
+                stmt.setDouble(7, appointment.getPrice());
                 
                 stmt.executeUpdate();
                 
@@ -157,7 +154,7 @@ public class AppointmentService {
      * @throws DatabaseException If there is a database error
      */
     public void cancelAppointment(int appointmentId) throws DatabaseException {
-        String query = "UPDATE appointments SET status = 'cancelled' WHERE appointment_id = ?";
+        String query = "UPDATE appointments SET status = 'CANCELLED' WHERE appointment_id = ?";
         
         try (Connection conn = ConnectionPool.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
@@ -213,7 +210,7 @@ public class AppointmentService {
         LocalDate today = LocalDate.now();
         LocalDate endDate = today.plusDays(days);
         
-        String query = "SELECT * FROM appointments WHERE DATE(start_time) BETWEEN ? AND ? AND status != 'cancelled' ORDER BY start_time";
+        String query = "SELECT * FROM appointments WHERE DATE(start_time) BETWEEN ? AND ? AND status != 'CANCELLED' ORDER BY start_time";
         List<Appointment> appointments = new ArrayList<>();
 
         try (Connection conn = ConnectionPool.getConnection();
@@ -298,7 +295,7 @@ public class AppointmentService {
      * @throws DatabaseException If there is a database error
      */
     private void validateTimeSlotAvailability(Appointment appointment) throws ValidationException, DatabaseException {
-        String query = "SELECT COUNT(*) FROM appointments WHERE start_time = ? AND status != 'cancelled'";
+        String query = "SELECT COUNT(*) FROM appointments WHERE start_time = ? AND status != 'CANCELLED'";
         try (Connection conn = ConnectionPool.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
             
@@ -341,7 +338,7 @@ public class AppointmentService {
      */
     private void checkVetAvailability(Timestamp startTime) throws ValidationException, DatabaseException {
         String query = "SELECT COUNT(*) FROM appointments WHERE service_type IN ('CONSULTATION', 'SURGERY', 'EMERGENCY') " +
-                      "AND start_time = ? AND status != 'cancelled'";
+                      "AND start_time = ? AND status != 'CANCELLED'";
         try (Connection conn = ConnectionPool.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
             stmt.setTimestamp(1, startTime);
@@ -365,7 +362,6 @@ public class AppointmentService {
         Appointment appointment = new Appointment();
         appointment.setAppointmentId(rs.getInt("appointment_id"));
         appointment.setPetId(rs.getInt("pet_id"));
-        appointment.setService(rs.getString("service"));
         appointment.setServiceType(ServiceType.valueOf(rs.getString("service_type")));
         appointment.setStartTime(rs.getTimestamp("start_time"));
         appointment.setEndTime(rs.getTimestamp("end_time"));
