@@ -1,7 +1,7 @@
-package dao;
+package vet.dao;
 
-import model.Client;
-import exception.DatabaseException;
+import vet.model.Client;
+import vet.exception.DatabaseException;
 import java.util.List;
 
 /**

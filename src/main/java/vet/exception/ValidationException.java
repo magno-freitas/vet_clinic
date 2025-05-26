@@ -1,12 +1,12 @@
-package vet.exception;
+package exception;
 
 /**
- * Exception thrown when there is a validation error
+ * Exception thrown when validation fails
  */
 public class ValidationException extends VetClinicException {
     
     /**
-     * Constructor
+     * Create a new ValidationException with a message
      * @param message The error message
      */
     public ValidationException(String message) {
@@ -14,7 +14,7 @@ public class ValidationException extends VetClinicException {
     }
     
     /**
-     * Constructor
+     * Create a new ValidationException with a message and cause
      * @param message The error message
      * @param cause The cause of the exception
      */

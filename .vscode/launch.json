@@ -3,61 +3,17 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Main_Updated",
-            "request": "launch",
-            "mainClass": "vet.Main_Updated",
-            "projectName": "vet"
-        },
-        {
-            "type": "java",
-            "name": "Main_Updated",
-            "request": "launch",
-            "mainClass": "Main_Updated",
-            "projectName": "vet"
-        },
-        {
-            "type": "java",
-            "name": "vet/Main_Updated",
-            "request": "launch",
-            "mainClass": "vet/Main_Updated",
-            "projectName": "vet"
-        },
-        {
-            "type": "java",
-            "name": "Main_Updated",
-            "request": "launch",
-            "mainClass": "vet/vet.Main_Updated",
-            "projectName": "vet",
-            "classPaths": [
-                "${workspaceFolder}/bin",
-                "${workspaceFolder}/lib/*"
-            ]
-        },
-        {
-            "type": "java",
-            "name": "Current File",
-            "request": "launch",
-            "mainClass": "vet/vet.Main_Updated",
-            "projectName": "vet"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "vet/vet.Main",
-            "projectName": "vet"
-        },
-        {
-            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "vet.Main",
-            "projectName": "vet-clinic",
-            "classpath": [
-                "${workspaceFolder}/target/classes",
-                "${workspaceFolder}/lib/*"
-            ],
-            "vmArgs": "--add-modules jakarta.mail,jakarta.activation"
+            "projectName": "vet"
+        },
+        {
+            "type": "java",
+            "name": "Launch Vet Clinic",
+            "request": "launch",
+            "mainClass": "vet.Main",
+            "projectName": "vet-clinic"
         }
     ]
 }

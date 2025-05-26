@@ -1,4 +1,4 @@
-package model;
+package vet.model;
 
 /**
  * Enum representing user roles in the veterinary clinic system

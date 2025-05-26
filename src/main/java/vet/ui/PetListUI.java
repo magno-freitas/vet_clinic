@@ -1,9 +1,12 @@
 package ui;
 
-import ui.*;
-import util.LoggerUtil;
+import vet.ui.*;
+import vet.util.LoggerUtil;
 import java.sql.SQLException;
 import java.util.List;
+
+import vet.model.Pet;
+import vet.service.PetService;
 
 public class PetListUI {
     private final PetService petService;

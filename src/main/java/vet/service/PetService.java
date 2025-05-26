@@ -1,4 +1,4 @@
-package service;
+package vet.service;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -11,12 +11,12 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import model.Pet;
-import util.ConnectionPool;
-import util.LoggerUtil;
-import util.ValidationUtil;
-import exception.DatabaseException;
-import exception.ValidationException;
+import vet.model.Pet;
+import vet.util.ConnectionPool;
+import vet.util.LoggerUtil;
+import vet.util.ValidationUtil;
+import vet.exception.DatabaseException;
+import vet.exception.ValidationException;
 
 /**
  * Service class for managing pets
@@ -25,12 +25,13 @@ public class PetService {
     private static final Logger logger = LoggerUtil.getLogger(PetService.class);
     
     /**
-     * Create a new pet
-     * @param pet The pet to create
+     * Add a new pet
+     * @param pet The pet to add
+     * @return The ID of the newly created pet
      * @throws DatabaseException If there is a database error
      * @throws ValidationException If the pet data is invalid
      */
-    public void createPet(Pet pet) throws DatabaseException, ValidationException {
+    public int addPet(Pet pet) throws DatabaseException, ValidationException {
         validatePet(pet);
         
         String query = "INSERT INTO pets (client_id, name, species, breed, birth_date) VALUES (?, ?, ?, ?, ?)";
@@ -53,13 +54,47 @@ public class PetService {
             
             try (ResultSet rs = stmt.getGeneratedKeys()) {
                 if (rs.next()) {
-                    pet.setPetId(rs.getInt(1));
-                    logger.info("Created pet with ID: " + pet.getPetId());
+                    int petId = rs.getInt(1);
+                    pet.setPetId(petId);
+                    logger.info("Created pet with ID: " + petId);
+                    return petId;
                 }
             }
+            
+            throw new DatabaseException("Failed to retrieve generated pet ID");
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error creating pet", e);
             throw new DatabaseException("Error creating pet: " + e.getMessage(), e);
+        }
+    }
+    
+    /**
+     * Get a pet by ID
+     * @param petId The pet ID
+     * @return The pet or null if not found
+     * @throws DatabaseException If there is a database error
+     */
+    public Pet getPetById(int petId) throws DatabaseException {
+        String query = "SELECT * FROM pets WHERE pet_id = ?";
+        
+        try (Connection conn = ConnectionPool.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            
+            stmt.setInt(1, petId);
+            
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    Pet pet = mapResultSetToPet(rs);
+                    logger.info("Retrieved pet with ID: " + petId);
+                    return pet;
+                } else {
+                    logger.warning("No pet found with ID: " + petId);
+                    return null;
+                }
+            }
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, "Error retrieving pet", e);
+            throw new DatabaseException("Error retrieving pet: " + e.getMessage(), e);
         }
     }
     
@@ -131,32 +166,30 @@ public class PetService {
     }
     
     /**
-     * Get a pet by ID
-     * @param petId The pet ID
-     * @return The pet
+     * Get client pet count
+     * @param clientId The client ID
+     * @return Number of pets owned by the client
      * @throws DatabaseException If there is a database error
      */
-    public Pet getPetById(int petId) throws DatabaseException {
-        String query = "SELECT * FROM pets WHERE pet_id = ?";
+    public int getClientPetCount(int clientId) throws DatabaseException {
+        String query = "SELECT COUNT(*) FROM pets WHERE client_id = ?";
         
         try (Connection conn = ConnectionPool.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
             
-            stmt.setInt(1, petId);
+            stmt.setInt(1, clientId);
             
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
-                    Pet pet = mapResultSetToPet(rs);
-                    logger.info("Retrieved pet with ID: " + petId);
-                    return pet;
-                } else {
-                    logger.warning("No pet found with ID: " + petId);
-                    return null;
+                    int count = rs.getInt(1);
+                    logger.info("Client " + clientId + " has " + count + " pets");
+                    return count;
                 }
+                return 0;
             }
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "Error retrieving pet", e);
-            throw new DatabaseException("Error retrieving pet: " + e.getMessage(), e);
+            logger.log(Level.SEVERE, "Error getting client pet count", e);
+            throw new DatabaseException("Error getting client pet count: " + e.getMessage(), e);
         }
     }
     

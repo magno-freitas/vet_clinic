@@ -1,7 +1,7 @@
-package dao;
+package vet.dao;
 
 import java.util.List;
-import exception.DatabaseException;
+import vet.exception.DatabaseException;
 
 /**
  * Generic Data Access Object interface for CRUD operations
