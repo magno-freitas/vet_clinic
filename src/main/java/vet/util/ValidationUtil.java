@@ -184,4 +184,9 @@ public class ValidationUtil {
         
         return sanitized;
     }
+
+    public static void validateFutureDate(Date date) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'validateFutureDate'");
+    }
 }

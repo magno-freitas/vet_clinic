@@ -10,4 +10,5 @@ public interface ClientRepository extends JpaRepository<Client, Integer> {
     Optional<Client> findByEmail(String email);
     Optional<Client> findByPhone(String phone);
     boolean existsByEmail(String email);
+    vet.model.Client save(vet.model.Client client);
 }

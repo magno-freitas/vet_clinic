@@ -1,12 +1,12 @@
-package ui;
+package vet.ui;
 
 
 import ui.*;
-import util.LoggerUtil;
+import vet.util.LoggerUtil;
 import java.sql.SQLException;
 import java.util.List;
-import model.Client;
-import service.ClientService;
+import com.vetclinic.vet.model.Client;
+import vet.service.ClientService;
 
 
 public class ClientListUI {

@@ -1,4 +1,4 @@
-package exception;
+package vet.exception;
 
 /**
  * Exception thrown when validation fails

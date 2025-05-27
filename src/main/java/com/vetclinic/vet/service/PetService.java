@@ -68,4 +68,9 @@ public class PetService {
             throw new ValidationException("A pet with this name already exists for this client");
         }
     }
+
+    public void addPet(Pet pet) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addPet'");
+    }
 }

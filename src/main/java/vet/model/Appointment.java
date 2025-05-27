@@ -1,10 +1,10 @@
-package model;
+package vet.model;
 
 
 
 import java.sql.Timestamp;
 
-import vet.ServiceType;
+import vet.model.ServiceType;
 
 public class Appointment {
     private int appointmentId;
@@ -85,23 +85,18 @@ public class Appointment {
         throw new UnsupportedOperationException("Unimplemented method 'getId'");
     }
 
-    public void setServiceType(String service2) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setServiceType'");
-    }
-
     public double getPrice() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getPrice'");
     }
 
-    public void setServiceType(model.ServiceType valueOf) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setServiceType'");
-    }
-
     public void setPrice(double double1) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setPrice'");
+    }
+
+    public void setServiceType(String service2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setServiceType'");
     }
 }

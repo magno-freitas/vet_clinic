@@ -1,4 +1,4 @@
-package model;
+package vet.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

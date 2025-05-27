@@ -1,9 +1,9 @@
-package ui;
+package vet.ui;
 
-import model.Client;
-import service.ClientService;
-import util.ValidationUtil;
-import exception.VetClinicException;
+import vet.model.Client;
+import vet.service.ClientService;
+import vet.util.ValidationUtil;
+import vet.exception.VetClinicException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -14,12 +14,6 @@ public class ClientRegistrationUI {
     public ClientRegistrationUI(Scanner scanner, ClientService clientService) {
         this.scanner = scanner;
         this.clientService = clientService;
-    }
-
-    public ClientRegistrationUI(Scanner scanner2, vet.ClientService clientService2) {
-        this.scanner = null;
-        this.clientService = new ClientService();
-        //TODO Auto-generated constructor stub
     }
 
     public void register() throws SQLException {

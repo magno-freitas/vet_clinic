@@ -1,4 +1,4 @@
-package exception;
+package vet.exception;
 
 import java.sql.SQLException;
 

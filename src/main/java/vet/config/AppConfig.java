@@ -45,21 +45,6 @@ public class AppConfig {
     }
 
     /**
-     * Set default properties in case the config file cannot be loaded
-     */
-    private static void setDefaultProperties() {
-        properties.setProperty("db.url", "jdbc:mysql://localhost:3306/vet_clinic");
-        properties.setProperty("db.username", "root");
-        properties.setProperty("db.password", "root");
-        properties.setProperty("db.poolSize", "10");
-        properties.setProperty("mail.smtp.host", "smtp.gmail.com");
-        properties.setProperty("mail.smtp.port", "587");
-        properties.setProperty("mail.smtp.auth", "true");
-        properties.setProperty("mail.smtp.starttls.enable", "true");
-        logger.info("Using default configuration values");
-    }
-
-    /**
      * Get a property value by key
      * @param key The property key
      * @return The property value or null if not found
@@ -81,7 +66,12 @@ public class AppConfig {
         }
         return properties.getProperty("db.url");
     }
-
+public static Properties getProperties() {
+    if (properties == null) {
+        initialize();
+    }
+    return properties;
+}
     /**
      * Get the database username
      * @return The database username
@@ -103,7 +93,7 @@ public class AppConfig {
         }
         return properties.getProperty("db.password");
     }
-    
+
     /**
      * Get the database connection pool size
      * @return The database connection pool size
@@ -119,7 +109,7 @@ public class AppConfig {
             return 10;
         }
     }
-
+    
     /**
      * Get the SMTP host for email
      * @return The SMTP host
@@ -162,5 +152,21 @@ public class AppConfig {
             initialize();
         }
         return Boolean.parseBoolean(properties.getProperty("mail.smtp.starttls.enable", "true"));
+    }
+
+
+    /**
+     * Set default properties in case the config file cannot be loaded
+     */
+    private static void setDefaultProperties() {
+        properties.setProperty("db.url", "jdbc:mysql://localhost:3306/vet_clinic");
+        properties.setProperty("db.username", "root");
+        properties.setProperty("db.password", "root");
+        properties.setProperty("db.poolSize", "10");
+        properties.setProperty("mail.smtp.host", "smtp.gmail.com");
+        properties.setProperty("mail.smtp.port", "587");
+        properties.setProperty("mail.smtp.auth", "true");
+        properties.setProperty("mail.smtp.starttls.enable", "true");
+        logger.info("Using default configuration values");
     }
 }

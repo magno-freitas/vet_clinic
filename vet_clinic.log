@@ -1,0 +1,42 @@
+mai. 27, 2025 4:02:24 PM vet.config.AppConfig initialize
+INFORMAÇÕES: Configuration loaded successfully from classpath
+mai. 27, 2025 4:02:24 PM vet.vet.Main main
+INFORMAÇÕES: Application configuration loaded successfully
+mai. 27, 2025 4:02:24 PM vet.util.ConnectionPool <clinit>
+GRAVE: Failed to initialize connection pool: Unimplemented method 'getProperties'
+mai. 27, 2025 4:02:43 PM vet.config.AppConfig initialize
+INFORMAÇÕES: Configuration loaded successfully from classpath
+mai. 27, 2025 4:02:43 PM vet.vet.Main main
+INFORMAÇÕES: Application configuration loaded successfully
+mai. 27, 2025 4:02:43 PM vet.util.ConnectionPool <clinit>
+GRAVE: Failed to initialize connection pool: Unimplemented method 'getProperties'
+mai. 27, 2025 4:06:04 PM vet.config.AppConfig initialize
+INFORMAÇÕES: Configuration loaded successfully from classpath
+mai. 27, 2025 4:06:05 PM vet.Main main
+INFORMAÇÕES: Application configuration loaded successfully
+mai. 27, 2025 4:06:05 PM vet.util.ConnectionPool <clinit>
+GRAVE: Failed to initialize connection pool: Unimplemented method 'getProperties'
+mai. 27, 2025 4:19:20 PM vet.config.AppConfig initialize
+INFORMAÇÕES: Configuration loaded successfully from classpath
+mai. 27, 2025 4:19:20 PM vet.Main main
+INFORMAÇÕES: Application configuration loaded successfully
+mai. 27, 2025 4:19:20 PM vet.util.ConnectionPool <clinit>
+GRAVE: Failed to initialize connection pool: Unimplemented method 'getProperties'
+mai. 27, 2025 4:50:23 PM vet.config.AppConfig initialize
+INFORMAÇÕES: Configuration loaded successfully from classpath
+mai. 27, 2025 4:50:24 PM vet.vet.Main main
+INFORMAÇÕES: Application configuration loaded successfully
+mai. 27, 2025 4:50:24 PM vet.util.ConnectionPool <clinit>
+GRAVE: Failed to initialize connection pool: Unimplemented method 'getProperties'
+mai. 27, 2025 4:52:22 PM vet.config.AppConfig initialize
+INFORMAÇÕES: Configuration loaded successfully from classpath
+mai. 27, 2025 4:52:22 PM vet.Main main
+INFORMAÇÕES: Application configuration loaded successfully
+mai. 27, 2025 4:52:22 PM vet.util.ConnectionPool <clinit>
+GRAVE: Failed to initialize connection pool: Unimplemented method 'getProperties'
+mai. 27, 2025 4:52:23 PM vet.config.AppConfig initialize
+INFORMAÇÕES: Configuration loaded successfully from classpath
+mai. 27, 2025 4:52:23 PM vet.Main main
+INFORMAÇÕES: Application configuration loaded successfully
+mai. 27, 2025 4:52:23 PM vet.util.ConnectionPool <clinit>
+GRAVE: Failed to initialize connection pool: Unimplemented method 'getProperties'

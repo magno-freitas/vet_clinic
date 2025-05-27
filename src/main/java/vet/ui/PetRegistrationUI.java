@@ -1,11 +1,15 @@
-package ui;
+package vet.ui;
 
 import ui.*;
-import util.ValidationUtil;
-import util.LoggerUtil;
-import exception.VetClinicException;
+import vet.util.ValidationUtil;
+import vet.util.LoggerUtil;
+import vet.exception.VetClinicException;
 import java.sql.SQLException;
 import java.util.Scanner;
+
+import com.vetclinic.vet.model.Pet;
+import vet.service.ClientService;
+import vet.service.PetService;
 
 public class PetRegistrationUI {
     private final Scanner scanner;

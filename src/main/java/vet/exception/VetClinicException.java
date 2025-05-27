@@ -1,4 +1,4 @@
-package exception;
+package vet.exception;
 
 /**
  * Base exception class for all application exceptions

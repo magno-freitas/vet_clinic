@@ -1,6 +1,9 @@
-package model;
+package vet.model;
 
 import java.util.Date;
+
+import com.vetclinic.vet.model.Pet;
+
 import java.text.SimpleDateFormat;
 
 /**
@@ -240,5 +243,10 @@ public class MedicalRecord {
                 ", diagnosis='" + diagnosis + '\'' +
                 ", treatment='" + treatment + '\'' +
                 '}';
+    }
+
+    public void setPet(Pet pet) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setPet'");
     }
 }

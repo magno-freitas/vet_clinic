@@ -1,5 +1,6 @@
-package model;
+package vet.model;
 
+import java.sql.Timestamp;
 
 public class Client {
     private int clientId;
@@ -71,5 +72,10 @@ public class Client {
     public Object getId() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getId'");
+    }
+
+    public void setCreatedAt(Timestamp timestamp) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setCreatedAt'");
     }
 }

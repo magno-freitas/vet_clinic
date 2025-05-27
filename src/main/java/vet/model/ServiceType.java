@@ -4,50 +4,32 @@ package vet.model;
  * Enum representing the types of services offered by the veterinary clinic
  */
 public enum ServiceType {
-    BANHO("Banho", 50.0, 60),
-    TOSA("Tosa", 70.0, 90),
-    VACINA("Vacina", 100.0, 30),
-    CONSULTA("Consulta", 150.0, 60),
-    CIRURGIA("Cirurgia", 500.0, 120),
-    LIMPEZA_DENTAL("Limpeza Dental", 200.0, 60),
-    EMERGENCIA("Emergência", 250.0, 90);
-    
+    VACCINATION("Vacinação", 100.0, 30),
+    CONSULTATION("Consulta", 150.0, 60),
+    SURGERY("Cirurgia", 500.0, 120),
+    EMERGENCY("Emergência", 250.0, 90),
+    DENTAL_CLEANING("Limpeza Dental", 200.0, 60),
+    GROOMING_BATH("Banho", 80.0, 45),
+    GROOMING_TRIM("Tosa", 100.0, 60), VACCINE, TOSA, BANHO, CONSULTA, VACINA;
+
     private final String description;
     private final double defaultPrice;
     private final int durationMinutes;
-    
-    /**
-     * Constructor
-     * @param description The service description
-     * @param defaultPrice The default price
-     * @param durationMinutes The duration in minutes
-     */
+
     ServiceType(String description, double defaultPrice, int durationMinutes) {
         this.description = description;
         this.defaultPrice = defaultPrice;
         this.durationMinutes = durationMinutes;
     }
-    
-    /**
-     * Get the service description
-     * @return The service description
-     */
+
     public String getDescription() {
         return description;
     }
-    
-    /**
-     * Get the default price
-     * @return The default price
-     */
+
     public double getDefaultPrice() {
         return defaultPrice;
     }
-    
-    /**
-     * Get the duration in minutes
-     * @return The duration in minutes
-     */
+
     public int getDurationMinutes() {
         return durationMinutes;
     }
@@ -64,5 +46,10 @@ public enum ServiceType {
             }
         }
         return null;
+    }
+
+    public String getDescricao() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDescricao'");
     }
 }

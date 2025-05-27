@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "VetClinicApplication",
+            "request": "launch",
+            "mainClass": "com.vetclinic.vet.VetClinicApplication",
+            "projectName": "vet-clinic"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "vet.vet.Main",
+            "projectName": "vet-clinic"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "vet.Main",

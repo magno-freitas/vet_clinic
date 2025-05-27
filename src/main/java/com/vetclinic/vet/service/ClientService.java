@@ -61,4 +61,9 @@ public class ClientService {
             throw new ValidationException("Email already registered: " + client.getEmail());
         }
     }
+
+    public int getClientId(String email, String phone) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getClientId'");
+    }
 }

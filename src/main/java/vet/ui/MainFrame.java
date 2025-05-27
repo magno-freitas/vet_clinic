@@ -1,4 +1,6 @@
-package ui;
+package vet.ui;
+
+
 
 import java.util.Scanner;
 import vet.util.LoggerUtil;
@@ -6,6 +8,7 @@ import vet.service.AppointmentService;
 import vet.service.AvailabilityService;
 import vet.service.ClientService;
 import vet.service.PetService;
+import vet.ui.ClientRegistrationUI;
 
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -19,7 +22,7 @@ public class MainFrame {
 
     public MainFrame() {
         this.scanner = new Scanner(System.in);
-        this.clientService = new ClientService();
+        this.clientService = new ClientService(null);
         this.petService = new PetService();
         this.appointmentService = new AppointmentService();
         this.availabilityService = new AvailabilityService();

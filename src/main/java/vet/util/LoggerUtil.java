@@ -1,20 +1,25 @@
-package util;
+package vet.util;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.Level;
+import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
+
+import com.vetclinic.vet.service.ClientService;
 
 /**
  * Utility class for logging
  */
 public class LoggerUtil {
-    public static final String WARNING = null;
-    public static Object WARNING;
+    public static final String WARNING = "WARNING";
+    public static final String ERROR = "ERROR";
     private static final String LOG_FILE = "vet_clinic.log";
     private static boolean initialized = false;
     
@@ -67,42 +72,22 @@ public class LoggerUtil {
         return Logger.getLogger(clazz.getName());
     }
 
-    public static void logError(String string, SQLException e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'logError'");
-    }   return Logger.getLogger(clazz.getName());
-    }
-
-    public static void logError(String string, SQLException e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'logError'");
-    }
-
-    public static void logWarning(String string) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'logWarning'");
-    }       // Set default level
-            rootLogger.setLevel(Level.INFO);
-            
-            initialized = true;
-        } catch (IOException e) {
-            System.err.println("Failed to initialize logging: " + e.getMessage());
-            e.printStackTrace();
-        }
-    }
-    
-    /**
-     * Get a logger for the specified class
-     * @param clazz The class requesting the logger
-     * @return A configured logger
-     */
-    public static Logger getCustomLogger(Class<?> clazz) {
+    public static void logError(String message, Throwable e) {
         if (!initialized) {
             initialize();
         }
-        return Logger.getLogger(clazz.getName());
+        Logger logger = Logger.getLogger(LoggerUtil.class.getName());
+        logger.log(Level.SEVERE, message, e);
     }
-    
+
+    public static void logWarning(String message) {
+        if (!initialized) {
+            initialize();
+        }
+        Logger logger = Logger.getLogger(LoggerUtil.class.getName());
+        logger.warning(message);
+    }
+
     /**
      * Custom log formatter for more readable logs
      */
@@ -132,66 +117,6 @@ public class LoggerUtil {
             
             return sb.toString();
         }
-    }
-
-    public static Logger getLogger(Class<ClientService> class1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getLogger'");
-    }
-
-    public static Logger getLogger(Class<AuditLogService> class1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getLogger'");
-    }
-
-    public static Logger getLogger(Class<ClientService> class1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getLogger'");
-    }
-
-    public static Logger getLogger(Class<AppointmentService> class1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getLogger'");
-    }
-
-    public static Logger getLogger(Class<AppointmentService> class1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getLogger'");
-    }
-
-    public static Logger getLogger(Class<AuditLogService> class1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getLogger'");
-    }
-
-    public static Logger getLogger(Class<PetService> class1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getLogger'");
-    }
-
-    public static Logger getLogger(Class<UserService> class1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getLogger'");
-    }
-
-    public static void logError(String string, VetClinicException e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'logError'");
-    }
-
-    public static Logger getLogger(Class<ClientService> class1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getLogger'");
-    }
-
-    public static void logError(String string, SQLException e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'logError'");
-    }
-
-    public static void logWarning(String string) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'logWarning'");
     }
 
 

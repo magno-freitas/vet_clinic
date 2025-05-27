@@ -1,20 +1,24 @@
-package ui;
+package vet.ui;
 
 import ui.*;
-import util.LoggerUtil;
-import exception.VetClinicException;
-import model.Appointment;
-import service.AppointmentService;
-import service.ClientService;
+import vet.util.LoggerUtil;
+import vet.exception.VetClinicException;
+import vet.model.Appointment;
+import vet.service.AppointmentService;
+import vet.service.ClientService;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 
 import java.sql.SQLException;
 import java.util.Scanner;
 import java.util.List;
 
+
 public class AppointmentStatusUI {
     private final Scanner scanner;
-    private final service.ClientService clientService;
-    private final service.AppointmentService appointmentService;
+    private final vet.service.ClientService clientService;
+    private final vet.service.AppointmentService appointmentService;
 
     public AppointmentStatusUI(Scanner scanner, ClientService clientService, 
                              AppointmentService appointmentService) {
@@ -58,9 +62,11 @@ public class AppointmentStatusUI {
                     appointment.getServiceType());
             }
             
+       
+    
         } catch (VetClinicException e) {
-            System.out.println("Erro na verificação: " + e.getMessage());
-            LoggerUtil.logError("Appointment status check error", e);
+            System.out.println("Erro: " + e.getMessage());
+            LoggerUtil.logError("Error checking appointment status", e);
         }
     }
 }

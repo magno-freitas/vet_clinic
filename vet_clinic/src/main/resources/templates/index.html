@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <title>FocinhosExigentes</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">FocinhosExigentes</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/register}">Cadastro</a></li>
+        <li><a href="#Serviço">Serviço</a></li>
+        <li><a th:href="@{/login}">Login</a></li>
+      </ul>
+    </nav>
+    <header id="home">
+      <div class="section__container header__container">
+        <div class="header__content">
+          <h4>Bem-vindo</h4>
+          <h1>Focinhos<br /><span>Exigentes</span></h1>
+          <h2>Nós amamos animais de estimação como você :)</h2>
+          <p>
+            De exames de rotina a tratamentos especializados, estamos aqui para
+            garantir que seus animais de estimação tenham uma vida feliz e saudável.
+          </p>
+          <div class="header__btn">
+            <button>
+              Comece aqui!
+              <span><i class="ri-arrow-right-line"></i></span>
+            </button>
+          </div>
+        </div>
+        <div class="header__image">
+          <img th:src="@{/assets/header-bg.png}" alt="header-bg" class="header__image-bg" />
+          <img th:src="@{/assets/header.png}" alt="header" />
+        </div>
+      </div>
+      <div class="header__bottom"></div>
+    </header>
+
+    <section class="section__container intro__container">
+      <h2 class="section__header">Conheça-nos melhor</h2>
+      <div class="intro__grid">
+        <div class="intro__card">
+          <div class="intro__image">
+            <img th:src="@{/assets/intro-1.png}" alt="intro" />
+          </div>
+          <h4>Especialistas em animais de estimação</h4>
+          <p>
+            Conheça nossa equipe de veterinários qualificados, dedicados ao bem-estar do seu animal de estimação.
+          </p>
+          <a href="#">Leia mais</a>
+        </div>
+        <div class="intro__card">
+          <div class="intro__image">
+            <img th:src="@{/assets/intro-2.png}" alt="intro" />
+          </div>
+          <h4>Serviços veterinários</h4>
+          <p>
+            Oferecemos uma ampla gama de serviços veterinários para manter seus animais de estimação
+            saudáveis e felizes.
+          </p>
+          <a href="#">Leia mais</a>
+        </div>
+        <div class="intro__card">
+          <div class="intro__image">
+            <img th:src="@{/assets/intro-3.png}" alt="intro" />
+          </div>
+          <h4>Contate-nos</h4>
+          <p>
+            Entre em contato conosco para tirar dúvidas ou agendar uma consulta
+            para cuidar do seu animal de estimação.
+          </p>
+          <a href="#">Leia mais</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rest of the sections remain the same, just update image paths with th:src -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script th:src="@{/js/main.js}"></script>
+  </body>
+</html>

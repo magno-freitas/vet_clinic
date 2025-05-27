@@ -4,7 +4,7 @@ import vet.config.AppConfig;
 import vet.model.ServiceType;
 import vet.model.Appointment;
 import vet.model.Availability;
-import vet.model.Client;
+import com.vetclinic.vet.model.Client;
 import vet.model.Pet;
 import vet.service.*;
 import vet.ui.MainFrame;
@@ -18,6 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 import java.util.Scanner;
 import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
@@ -80,7 +81,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         
         try {
-            ClientService clientService = new ClientService();
+            ClientService clientService = new ClientService(null);
             PetService petService = new PetService();
             AppointmentService appointmentService = new AppointmentService();
             AvailabilityService availabilityService = new AvailabilityService();
@@ -140,9 +141,6 @@ public class Main {
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Por favor, digite um número válido!");
-            } catch (SQLException e) {
-                System.out.println("Erro de banco de dados: " + e.getMessage());
-                logger.severe("Database error: " + e.getMessage());
             } catch (Exception e) {
                 System.out.println("Erro: " + e.getMessage());
                 logger.severe("Unexpected error: " + e.getMessage());
@@ -175,26 +173,20 @@ public class Main {
             cliente.setPhone(telefone);
             cliente.setAddress(endereco);
             
-            try {
-                int existingClientId = clientService.getClientId(email, telefone);
-                if (existingClientId != -1) {
-                    System.out.println("ALERTA: Já existe um cliente com este email e telefone (ID: " + existingClientId + ")");
-                    System.out.print("Deseja continuar mesmo assim? (S/N): ");
-                    if (!scanner.nextLine().equalsIgnoreCase("S")) {
-                        return;
-                    }
+            int existingClientId = clientService.getClientId(email, telefone);
+            if (existingClientId != -1) {
+                System.out.println("ALERTA: Já existe um cliente com este email e telefone (ID: " + existingClientId + ")");
+                System.out.print("Deseja continuar mesmo assim? (S/N): ");
+                if (!scanner.nextLine().equalsIgnoreCase("S")) {
+                    return;
                 }
-                
-                clientService.addClient(cliente);
-                System.out.println("Cliente cadastrado com sucesso! ID: " + cliente.getClientId());
-                
-                AuditLogService.logAction("Cliente cadastrado", "ID: " + cliente.getClientId() + ", Nome: " + cliente.getName());
-                
-            } catch (SQLException e) {
-                System.out.println("Erro ao cadastrar cliente: " + e.getMessage());
-                logger.severe("Erro ao cadastrar cliente: " + e.getMessage());
-                throw e;
             }
+            
+            clientService.addClient(cliente);
+            System.out.println("Cliente cadastrado com sucesso! ID: " + cliente.getClientId());
+            
+            AuditLogService auditService = new AuditLogService();
+            auditService.logAction("Cliente cadastrado", "ID: " + cliente.getClientId() + ", Nome: " + cliente.getName());
             
         } catch (IllegalArgumentException e) {
             System.out.println("Erro de validação: " + e.getMessage());
@@ -249,7 +241,8 @@ public class Main {
         int petId = petService.addPet(pet);
         System.out.println("Pet cadastrado com sucesso! ID: " + petId);
         
-        AuditLogService.logAction("Pet cadastrado", "ID: " + petId + ", Nome: " + pet.getName() + ", Dono: " + client.getName());
+        AuditLogService auditService = new AuditLogService();
+        auditService.logAction("Pet cadastrado", "ID: " + petId + ", Nome: " + pet.getName() + ", Dono: " + client.getName());
     }
 
     private static void agendarServico(Scanner scanner, PetService petService, 
@@ -295,9 +288,9 @@ public class Main {
                 }
                 break;
             case 3:
-                serviceType = ServiceType.VACINA;
-                service = serviceType.getDescricao();
-                if (checkRecentService(petId, ServiceType.VACINA, appointmentService)) {
+                serviceType = ServiceType.VACCINE;
+                service = serviceType.getDescription(); // Changed getDescricao() to getDescription()
+                if (checkRecentService(petId, ServiceType.VACCINE, appointmentService)) {
                     System.out.println("ALERTA: Este pet já tomou vacina nos últimos 30 dias.");
                     System.out.print("Deseja continuar mesmo assim? (S/N): ");
                     if (!scanner.nextLine().equalsIgnoreCase("S")) {
@@ -306,8 +299,8 @@ public class Main {
                 }
                 break;
             case 4:
-                serviceType = ServiceType.CONSULTA;
-                service = serviceType.getDescricao();
+                serviceType = ServiceType.CONSULTATION;
+                service = serviceType.getDescription();
                 break;
             default:
                 System.out.println("Opção inválida!");
@@ -559,4 +552,6 @@ public class Main {
         
         return date;
     }
+
+   
 }

@@ -32,4 +32,8 @@ public class Pet {
     
     public int getAge() { return age; }
     public void setAge(int age) { this.age = age; }
+    public Object getId() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getId'");
+    }
 }

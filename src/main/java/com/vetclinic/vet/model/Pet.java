@@ -5,8 +5,13 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Size;
+import vet.model.MedicalRecord;
+
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 @Entity
 @Table(name = "pets")
@@ -109,5 +114,20 @@ public class Pet extends BaseEntity {
     public void removeMedicalRecord(MedicalRecord record) {
         medicalRecords.remove(record);
         record.setPet(null);
+    }
+
+    public Map<String, ?> getId() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getId'");
+    }
+
+    public void setClientId(int clientId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setClientId'");
+    }
+
+    public void setAge(int age) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setAge'");
     }
 }

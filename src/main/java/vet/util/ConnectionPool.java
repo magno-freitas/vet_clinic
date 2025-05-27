@@ -36,7 +36,7 @@ public class ConnectionPool {
             dataSource = new HikariDataSource(config);
             logger.info("Connection pool initialized successfully");
         } catch (Exception e) {
-            logger.error("Failed to initialize connection pool", e);
+            logger.severe("Failed to initialize connection pool: " + e.getMessage());
             throw new ExceptionInInitializerError(e);
         }
     }
